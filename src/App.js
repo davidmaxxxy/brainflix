@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./assets/images/BrainFlix-logo.svg";
+import "./App.css";
+import Header from "./components/Component/Header";
+import Video from "./components/Component/Video";
+import "./styles/partials/header.css";
+import "./styles/partials/styles.css";
+import VideoDescription from "./components/Component/VideoDescription";
+import Comments from "./components/Component/Comments";
+import NextVideos from "./components/Component/NextVideo";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Video />
+      <VideoDescription />
+      <Comments />
+      <NextVideos />
     </div>
   );
 }
