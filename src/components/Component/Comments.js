@@ -1,41 +1,96 @@
 const Comments = () => {
   return (
-    <section className="comments">
-      <div className="comments__header">
-        <span className="comments__header__count">3 Comments</span>
-        <span className="comments__header__text">Comment</span>
-      </div>
-      <div className="comments__new-comment">
-        <img
-          src="user.png"
-          alt="Profile Picture"
-          className="comments__new-comment__profile"
-        />
-        <div className="comments__new-comment__input">
-          <span className="comments__new-comment__input__label">
-            Join the conversation
-          </span>
-          <input
-            type="text"
-            placeholder="Add a new comment"
-            className="comments__new-comment__input__field"
+    <section class="commentForm-section">
+      <h1 class="commentForm-section__title-container">
+        Join the Conversations
+      </h1>
+      <div class="commentForm-section__form-section">
+        <div class="commentForm-section__form-section--img-container">
+          <img
+            class="commentForm-section__form-section--img-container--img"
+            src="./assets/Images/Mohan-muruge.jpg"
           />
-          <button className="comments__new-comment__input__button">
-            <i className="fas fa-comment"></i> COMMENT
-          </button>
+        </div>
+        <div class="commentForm-section__form-section--form-container">
+          <form
+            class="commentForm-section__form-section--form-container--form"
+            id="commentForm-section-form"
+          >
+            <label for="name"> NAME </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+            <label for="comment"> COMMENT </label>
+            <textarea
+              id="comment"
+              name="comment"
+              placeholder="Add a new comment"
+            ></textarea>
+            <input type="submit" id="submit-comment" value="Comment" />
+          </form>
         </div>
       </div>
-      <div className="comments__comment">
-        <img
-          src="user2.png"
-          alt="Profile Picture"
-          className="comments__comment__profile"
-        />
-        <div className="comments__comment__content">
-          <div className="comments__comment__content__name">Jane Doe</div>
-          <div className="comments__comment__content__date">June 18, 2024</div>
-          <div className="comments__comment__content__text">
-            This is a sample comment. You can add more comments here.
+      <div class="commentForm-section__comments-section">
+        <div class="commentForm-section__comments-container">
+          <div class="commentForm-section__comments-container--img-container">
+            <div class="commentForm-section__comments-container--img"></div>
+          </div>
+          <div class="commentForm-section__comments-container--content-container">
+            <div class="commentForm-section__comments-container--title-container">
+              <p>Joe Doe</p>
+              <p>11/02/2024</p>
+            </div>
+            <div class="commentForm-section__comments-container--content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                minus corporis voluptates esse accusamus perferendis dolore, rem
+                ducimus. Consequatur ut cumque at neque consectetur distinctio
+                nobis voluptatibus maiores omnis maxime.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="commentForm-section__comments-container">
+          <div class="commentForm-section__comments-container--img-container">
+            <div class="commentForm-section__comments-container--img"></div>
+          </div>
+          <div class="commentForm-section__comments-container--content-container">
+            <div class="commentForm-section__comments-container--title-container">
+              <p>Mark Zuckerberg</p>
+              <p>11/02/2024</p>
+            </div>
+            <div class="commentForm-section__comments-container--content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                minus corporis voluptates esse accusamus perferendis dolore, rem
+                ducimus. Consequatur ut cumque at neque consectetur distinctio
+                nobis voluptatibus maiores omnis maxime.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="commentForm-section__comments-container">
+          <div class="commentForm-section__comments-container--img-container">
+            <div class="commentForm-section__comments-container--img"></div>
+          </div>
+          <div class="commentForm-section__comments-container--content-container">
+            <div class="commentForm-section__comments-container--title-container">
+              <p>Jeff Bezosinho</p>
+              <p>11/02/2024</p>
+            </div>
+            <div class="commentForm-section__comments-container--content">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                minus corporis voluptates esse accusamus perferendis dolore, rem
+                ducimus. Consequatur ut cumque at neque consectetur distinctio
+                nobis voluptatibus maiores omnis maxime.
+              </p>
+            </div>
           </div>
         </div>
       </div>

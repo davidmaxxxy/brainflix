@@ -1,3 +1,6 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
 .video {
   position: relative; /* For responsive sizing */
   width: 100%;
@@ -41,55 +44,177 @@
   /* Add styles for description content here */
 }
 
-.comments {
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-}
+.commentForm-section {
+  min-height: 100vh;
+  padding-bottom: 5rem;
+  @include flex-center-column;
 
-.comments__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
+  &__title-container {
+    width: 80%;
+  }
 
-.comments__header__count,
-.comments__header__text {
-  font-weight: bold;
-}
+  &__form-section {
+    width: 90%;
+    @include flex-center-row;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 
-.comments__new-comment,
-.comments__comment {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5rem;
-}
+    &--form-container {
+      @include flex-center-row;
+      align-items: flex-start;
+      width: 75%;
 
-.comments__new-comment__profile,
-.comments__comment__profile {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  margin-right: 1rem;
-}
+      &--form {
+        @include flex-center-column;
+        align-items: flex-start;
+        background-color: white;
+        width: 100%;
+        margin-left: 1rem;
 
-.comments__new-comment__input,
-.comments__comment__content {
-  flex: 1;
-}
+        border-radius: 5px;
+        box-sizing: border-box;
 
-.comments__new-comment__input__label {
-  font-style: italic;
-  margin-bottom: 0.5rem;
-}
+        @include mobile {
+          margin-left: 0;
+          padding: 1rem;
+        }
 
-.comments__new-comment__input__field,
-.comments__comment__content__text {
-  /* Add styles for input field and comment text here */
-}
+        label {
+          font-family: "Avenir Bold";
+          font-size: 14px;
+          margin-bottom: 0.5rem;
+        }
 
-.comments__new-comment__input__button {
-  /* Add styles for comment button here */
+        input[type="text"],
+        textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          // border: 1px solid $primary-color-silver;
+          border-radius: 4px;
+          // background-color: $secondary-color-albaster;
+          // font-size: $mobile-body-text-size;
+          // line-height: $mobile-body-line-height;
+          // font-weight: $mobile-body-text-weight;
+          font-family: "Avenir Regular";
+          box-sizing: border-box;
+
+          &:nth-child(4) {
+            height: 200px;
+          }
+          textarea {
+            resize: vertical;
+            max-width: 100%;
+            max-height: 150px;
+          }
+        }
+
+        input[type="submit"] {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          // background-color: $primary-color-bandsite-black;
+          color: white;
+          font-family: "Avenir Bold";
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken($primary-color-bandsite-black, 10%);
+          }
+        }
+      }
+    }
+
+    &--img-container {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      background-color: $secondary-color-silver;
+      overflow: hidden;
+      margin-top: 2rem;
+
+      &--img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__comments-section {
+    @include flex-center-column;
+    width: 90%;
+    padding: 1rem;
+
+    @include tablet {
+      width: 60%;
+    }
+  }
+
+  &__comments-container {
+    width: 90%;
+    @include flex-center-row;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid $secondary-color-silver;
+
+    &--img-container {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      background-color: $secondary-color-silver;
+      overflow: hidden;
+      margin-top: 0.5rem;
+
+      &--img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    &--content-container {
+      width: 80%;
+      @include flex-center-column;
+      margin-left: 1rem;
+    }
+
+    &--title-container {
+      width: 100%;
+      @include flex-center-row;
+      justify-content: space-between;
+
+      p {
+        &:nth-child(1) {
+          font-family: "Avenir Bold";
+        }
+        &:nth-child(2) {
+          color: $primary-color-silver;
+        }
+      }
+    }
+
+    &--content {
+      color: $primary-color-bandsite-black;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__like-delete-container {
+    width: 100%;
+    border: solid red;
+    @include flex-center-row;
+    justify-content: flex-start;
+
+    &--like-container {
+      width: 20%;
+      border: solid red;
+    }
+  }
 }
 
 /* Update styles.scss to include NextVideos styles */
