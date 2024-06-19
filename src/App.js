@@ -7,14 +7,22 @@ import "./styles/partials/styles.css";
 import VideoDescription from "./components/Component/VideoDescription";
 import Comments from "./components/Component/Comments";
 import NextVideos from "./components/Component/NextVideo";
+import { React, useState } from "react";
+
+import data from "./data/video-details.json";
+
+console.log(data[0].title);
 
 function App() {
+  const [mainVideo, setMainVideo] = useState(data[0]);
+  console.log(mainVideo);
+
   return (
     <div className="App">
       <Header />
       <Video />
       <VideoDescription />
-      <Comments />
+      <Comments key={mainVideo.id} comments={mainVideo.comments} />
       <NextVideos />
     </div>
   );
