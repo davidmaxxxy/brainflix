@@ -35,14 +35,23 @@ const Comments = ({ comments }) => {
       </div>
       <div className="commentForm-section__comments-section">
         {comments.map((comment) => (
-          <div className="commentForm-section__comments-container">
+          <div
+            key={comment.id}
+            className="commentForm-section__comments-container"
+          >
             <div className="commentForm-section__comments-container--img-container">
               <div className="commentForm-section__comments-container--img"></div>
             </div>
             <div className="commentForm-section__comments-container--content-container">
               <div className="commentForm-section__comments-container--title-container">
                 <p>{comment.name}</p>
-                <p>{new Date(comment.timestamp).toLocaleDateString()}</p>
+                <p>
+                  {new Date(comment.timestamp).toLocaleDateString("en-US", {
+                    month: "numeric",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </p>
               </div>
               <div className="commentForm-section__comments-container--content">
                 <p>{comment.comment}</p>

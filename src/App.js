@@ -1,28 +1,36 @@
+import { React, useState } from "react";
 import logo from "./assets/images/BrainFlix-logo.svg";
-import "./App.css";
-import Header from "./components/Component/Header";
-import Video from "./components/Component/Video";
 import "./styles/partials/header.css";
 import "./styles/partials/styles.css";
 import VideoDescription from "./components/Component/VideoDescription";
 import Comments from "./components/Component/Comments";
 import NextVideos from "./components/Component/NextVideo";
-import { React, useState } from "react";
+import "./App.css";
+import Header from "./components/Component/Header";
+import Video from "./components/Component/Video";
+import videoDetails from "./data/video-details.json";
+import videosJSON from "./data/videos.json";
 
-import data from "./data/video-details.json";
-
-console.log(data[0].title);
+console.log(videoDetails[0]);
+console.log(videosJSON[0]);
 
 function App() {
-  const [mainVideo, setMainVideo] = useState(data[0]);
-  console.log(mainVideo);
+  const [details, setDetails] = useState(videoDetails[0]);
+  const [videos, setVideos] = useState(videosJSON[0]);
+
+  console.log(details);
 
   return (
     <div className="App">
       <Header />
-      <Video />
-      <VideoDescription />
-      <Comments key={mainVideo.id} comments={mainVideo.comments} />
+      <Video image={details.image} />
+      <VideoDescription
+        channel={details.channel}
+        timestamp={details.timestamp}
+        views={details.views}
+        likes={details.likes}
+      />
+      <Comments comments={details.comments} />
       <NextVideos />
     </div>
   );

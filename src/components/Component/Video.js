@@ -1,11 +1,11 @@
-const Video = () => {
+const Video = ({ image }) => {
   return (
     <section className="video">
       <video
         width="100%"
         height="auto"
         controls
-        poster="video-thumbnail.jpg"
+        poster={image}
         className="video__player"
       >
         {/* Add video source(s) here when functionality is implemented */}
