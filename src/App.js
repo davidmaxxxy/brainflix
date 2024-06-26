@@ -16,7 +16,7 @@ console.log(videosJSON[0]);
 
 function App() {
   const [details, setDetails] = useState(videoDetails[0]);
-  const [videos, setVideos] = useState(videosJSON[0]);
+  const [videos, setVideos] = useState(videosJSON);
 
   console.log(details);
 
@@ -25,13 +25,14 @@ function App() {
       <Header />
       <Video image={details.image} />
       <VideoDescription
+        title={details.title}
         channel={details.channel}
         timestamp={details.timestamp}
         views={details.views}
         likes={details.likes}
       />
       <Comments comments={details.comments} />
-      <NextVideos />
+      <NextVideos videos={videos} mainVidoeId={details.id} />
     </div>
   );
 }

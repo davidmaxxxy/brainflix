@@ -1,22 +1,28 @@
-const NextVideos = () => {
+const NextVideos = ({ videos, mainVidoeId }) => {
+  const filteredVideosArray = videos.filter(
+    (video) => video.id !== mainVidoeId
+  );
+  console.log(filteredVideosArray);
+
   return (
     <section className="next-videos">
-      <div className="next-videos__title">NEXT VIDEOS</div>
+      <div className="next-videos__title">Next Videos</div>
       <div className="next-videos__list">
-        <div className="next-videos__video-container">
-          <div className="next-videos__video-container--video-img">
-            <img src="video-thumbnail.jpg" alt="Video Thumbnail" />
+        {filteredVideosArray.map((video) => (
+          <div key={video.id} className="next-videos__video-container">
+            <div className="next-videos__video-container--video-img">
+              <img src={video.image} alt={video.title} />
+            </div>
+            <div className="next-videos__video-container--video-desc">
+              <p className="next-videos__video-container--video-desc-bold">
+                {video.title}
+              </p>
+              <p className="next-videos__video-container--video-desc-standard">
+                {video.channel}
+              </p>
+            </div>
           </div>
-          <div className="next-videos__video-container--video-desc">
-            <p className="next-videos__video-container--video-desc-bold">
-              This is a Sample Video Title
-            </p>
-            <p className="next-videos__video-container--video-desc-standard">
-              by John Doe
-            </p>
-          </div>
-        </div>
-        {/* Add more NextVideo components here for additional videos */}
+        ))}
       </div>
     </section>
   );

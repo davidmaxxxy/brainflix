@@ -1,6 +1,19 @@
-const VideoDescription = ({ channel, image, timestamp, views, likes }) => {
+import React from "react";
+import "../../styles/partials/styles.css";
+
+const VideoDescription = ({
+  channel,
+  image,
+  timestamp,
+  views,
+  likes,
+  title,
+}) => {
   return (
     <section className="video-description">
+      <div className="video-description__title">
+        <h1>{title}</h1>
+      </div>
       <div className="video-description__creator">{channel}</div>
       <div className="video-description__date">
         {new Date(timestamp).toLocaleDateString("en-US", {

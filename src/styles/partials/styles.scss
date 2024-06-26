@@ -21,6 +21,15 @@
   border-bottom: 1px solid #ccc;
 }
 
+.video-description__title {
+  margin-bottom: 0.5rem;
+
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
 .video-description__creator,
 .video-description__date {
   margin-bottom: 0.5rem;
@@ -38,10 +47,6 @@
   display: flex;
   align-items: center;
   font-size: 0.8rem;
-}
-
-.video-description__description {
-  /* Add styles for description content here */
 }
 
 .commentForm-section {
