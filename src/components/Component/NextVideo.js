@@ -1,7 +1,8 @@
-const NextVideos = ({ videos, mainVidoeId }) => {
+const NextVideos = ({ videos, mainVidoeId, handleNextVideo }) => {
   const filteredVideosArray = videos.filter(
     (video) => video.id !== mainVidoeId
   );
+
   console.log(filteredVideosArray);
 
   return (
@@ -9,7 +10,11 @@ const NextVideos = ({ videos, mainVidoeId }) => {
       <div className="next-videos__title">Next Videos</div>
       <div className="next-videos__list">
         {filteredVideosArray.map((video) => (
-          <div key={video.id} className="next-videos__video-container">
+          <div
+            onClick={() => handleNextVideo(video.id)}
+            key={video.id}
+            className="next-videos__video-container"
+          >
             <div className="next-videos__video-container--video-img">
               <img src={video.image} alt={video.title} />
             </div>

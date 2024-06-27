@@ -15,24 +15,38 @@ console.log(videoDetails[0]);
 console.log(videosJSON[0]);
 
 function App() {
-  const [details, setDetails] = useState(videoDetails[0]);
+  const [mainVideo, setMainVideo] = useState(videoDetails[0]);
   const [videos, setVideos] = useState(videosJSON);
 
-  console.log(details);
+  const handleNextVideo = (videoId) => {
+    console.log(videoId);
+    const filteredVideo = videoDetails.filter((video) => video.id === videoId);
+
+    console.log(filteredVideo);
+
+    setMainVideo(filteredVideo[0]);
+  };
+
+  console.log(mainVideo);
+  console.log(mainVideo.comments);
 
   return (
     <div className="App">
       <Header />
-      <Video image={details.image} />
+      <Video image={mainVideo.image} />
       <VideoDescription
-        title={details.title}
-        channel={details.channel}
-        timestamp={details.timestamp}
-        views={details.views}
-        likes={details.likes}
+        title={mainVideo.title}
+        channel={mainVideo.channel}
+        timestamp={mainVideo.timestamp}
+        views={mainVideo.views}
+        likes={mainVideo.likes}
       />
-      <Comments comments={details.comments} />
-      <NextVideos videos={videos} mainVidoeId={details.id} />
+      <Comments comments={mainVideo.comments} />
+      <NextVideos
+        handleNextVideo={handleNextVideo}
+        videos={videos}
+        mainVidoeId={mainVideo.id}
+      />
     </div>
   );
 }
