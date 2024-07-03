@@ -19,16 +19,9 @@ function App() {
   const [videos, setVideos] = useState(videosJSON);
 
   const handleNextVideo = (videoId) => {
-    console.log(videoId);
     const filteredVideo = videoDetails.filter((video) => video.id === videoId);
-
-    console.log(filteredVideo);
-
     setMainVideo(filteredVideo[0]);
   };
-
-  console.log(mainVideo);
-  console.log(mainVideo.comments);
 
   return (
     <div className="App">
@@ -40,6 +33,7 @@ function App() {
         timestamp={mainVideo.timestamp}
         views={mainVideo.views}
         likes={mainVideo.likes}
+        description={mainVideo.description}
       />
       <Comments comments={mainVideo.comments} />
       <NextVideos

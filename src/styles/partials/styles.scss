@@ -6,40 +6,81 @@
   width: 100%;
   padding-bottom: 56.25%;
   overflow: hidden;
-}
 
-.video__player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} /*# sourceMappingURL=video.css.map */
+  &__player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .video-description {
   padding: 1rem;
   border-bottom: 1px solid #ccc;
-}
+  border: solid red;
 
-.video-description__title {
-  margin-bottom: 0.5rem;
+  &__title {
+    margin-bottom: 0.5rem;
+    border-bottom: solid lightgrey;
 
-  h1 {
-    font-weight: bold;
-    font-size: 2rem;
+    h1 {
+      text-align: left;
+      font-weight: bold;
+      font-size: 2rem;
+      border: solid pink;
+    }
   }
-}
 
-.video-description__creator,
-.video-description__date {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
+  &__details {
+    @include flex-center-row;
 
-.video-description__stats {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+    &--container {
+      @include flex-center-column;
+      border: solid blue;
+      width: 50%;
+    }
+
+    &--creator {
+      border: solid pink;
+
+      h3 {
+        margin: 0;
+      }
+    }
+    &--date {
+      font-weight: bold;
+      border: solid red;
+      h3 {
+        margin: 0;
+      }
+    }
+
+    &--stats {
+      @include flex-center-column;
+      justify-content: space-between;
+
+      border: solid red;
+      // border-bottom: solid lightgrey;
+
+      &__views {
+        border: solid green;
+
+        h3 {
+          margin: 0;
+        }
+      }
+
+      &__likes {
+        border: solid green;
+
+        h3 {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 .video-description__stats__views,
@@ -100,7 +141,7 @@
           // font-size: $mobile-body-text-size;
           // line-height: $mobile-body-line-height;
           // font-weight: $mobile-body-text-weight;
-          font-family: "Avenir Regular";
+
           box-sizing: border-box;
 
           &:nth-child(4) {
@@ -119,7 +160,7 @@
           border-radius: 4px;
           // background-color: $primary-color-bandsite-black;
           color: white;
-          font-family: "Avenir Bold";
+
           cursor: pointer;
           transition: background-color 0.3s ease;
 
@@ -193,7 +234,6 @@
 
       p {
         &:nth-child(1) {
-          font-family: "Avenir Bold";
         }
         &:nth-child(2) {
           color: $primary-color-silver;

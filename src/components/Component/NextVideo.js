@@ -3,8 +3,6 @@ const NextVideos = ({ videos, mainVidoeId, handleNextVideo }) => {
     (video) => video.id !== mainVidoeId
   );
 
-  console.log(filteredVideosArray);
-
   return (
     <section className="next-videos">
       <div className="next-videos__title">Next Videos</div>

@@ -1,45 +1,53 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./global" as *;
+
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-center-column;
   padding: 1rem;
-  background-color: #f0f0f0;
-}
+  border: solid green;
 
-.header__logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+  &__logo {
+    width: 80%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: solid pink;
+  }
 
-.header__search-user {
-  display: flex;
-  align-items: center;
-}
+  &__search-user {
+    width: 80%;
+    @include flex-center-row;
+    margin: 0.5rem 0;
+    border: solid pink;
+  }
 
-.header__search {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  margin-right: 1rem;
-}
+  &__search {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    margin-right: 1rem;
+    border: solid blue;
+  }
 
-.header__user-logo {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-}
+  &__user-logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: solid blue;
+  }
+  &__uploader {
+    width: 80%;
+    margin: 0.5rem 0;
+    border: solid pink;
+  }
 
-.header__uploader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0; /* Add some margin for spacing */
-}
-
-.header__uploader__button {
-  background-color: #4caf50; /* Green color */
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  &__uploader__button {
+    width: 100%;
+    background-color: #3795ff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

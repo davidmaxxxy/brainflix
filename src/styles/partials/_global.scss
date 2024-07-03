@@ -1,0 +1,86 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+h1 {
+  font-size: $mobile-page-header-text-size;
+  font-weight: $mobile-page-header-text-weight;
+  font-family: "Avenir Bold";
+  line-height: $mobile-page-header-line-height;
+
+  @include tablet {
+    font-size: $wide-screen-section-header-text-size;
+    font-weight: $wide-screen-section-header-text-weight;
+    font-family: "Avenir Bold";
+    line-height: $wide-screen-section-header-line-height;
+  }
+}
+
+h2 {
+  font-size: $mobile-section-header-text-size;
+  font-weight: $mobile-section-header-text-weight;
+  line-height: $mobile-section-header-line-height;
+  font-family: "Avenir Demi";
+
+  @include tablet {
+    font-size: $wide-screen-subheader-text-size;
+    font-weight: $wide-screen-subheader-text-weight;
+    line-height: $wide-screen-subheader-line-height;
+    font-family: "Avenir Demi";
+  }
+}
+
+h3 {
+  font-size: $mobile-section-header-text-size;
+  font-weight: $mobile-section-header-text-weight;
+  line-height: $mobile-section-header-line-height;
+  font-family: "Avenir Demi";
+
+  @include tablet {
+    font-size: 18px;
+    font-weight: $wide-screen-body-text-weight;
+    line-height: $wide-screen-body-line-height;
+    font-family: "Avenir Regular";
+  }
+}
+
+p {
+  font-size: $mobile-body-text-size;
+  font-weight: $mobile-body-text-weight;
+  font-family: "Avenir Regular";
+  line-height: $mobile-body-line-height;
+
+  @include tablet {
+    font-size: $wide-screen-body-text-size;
+    font-weight: $wide-screen-body-text-weight;
+    font-family: "Avenir Regular";
+    line-height: $wide-screen-body-line-height;
+  }
+}
+
+a {
+  font-size: $mobile-body-text-size;
+  font-weight: $mobile-body-text-weight;
+  font-family: "Avenir Regular";
+  line-height: $mobile-body-line-height;
+  text-decoration: none;
+  color: $primary-color-white;
+
+  @include tablet {
+    font-size: $wide-screen-body-text-size;
+    font-weight: $wide-screen-body-text-weight;
+    font-family: "Avenir Regular";
+    line-height: $wide-screen-body-line-height;
+    text-decoration: none;
+    color: $primary-color-white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
