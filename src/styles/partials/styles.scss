@@ -1,8 +1,9 @@
-@use "./mixins" as *;
 @use "./variables" as *;
+@use "./mixins" as *;
+@use "./global" as *;
 
 .video {
-  position: relative; /* For responsive sizing */
+  position: relative;
   width: 100%;
   padding-bottom: 56.25%;
   overflow: hidden;
@@ -24,11 +25,6 @@
   &__title {
     margin-bottom: 0.5rem;
     border-bottom: solid lightgrey;
-
-    h1 {
-      text-align: left;
-      border: solid pink;
-    }
   }
 
   &__details {
@@ -117,11 +113,6 @@
         border-radius: 5px;
         box-sizing: border-box;
 
-        @include mobile {
-          margin-left: 0;
-          padding: 1rem;
-        }
-
         label {
           font-size: 14px;
           margin-bottom: 0.5rem;
@@ -199,9 +190,9 @@
     width: 90%;
     padding: 1rem;
 
-    @include tablet {
-      width: 60%;
-    }
+    // @include tablet {
+    //   width: 60%;
+    // }
   }
 
   &__comments-container {

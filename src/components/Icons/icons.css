@@ -1,3 +1,104 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 32px;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+p {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 18px;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+a {
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 18px;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (min-width: 768px) and (max-width: 1025px) {
+  a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #ffffff;
+  }
+}
+a:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Avenir Next", sans-serif;
+}
+
 .upload-icon {
   width: 24px;
   height: 24px;

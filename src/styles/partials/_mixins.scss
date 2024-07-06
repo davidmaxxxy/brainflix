@@ -1,21 +1,35 @@
 @use "./variables" as *;
 
 //MEDIA QUERIES
-@mixin mobile {
-  @media screen and (max-width: $mobile-breakpoint) {
-    @content;
-  }
+// styles/partials/_mixins.scss
+
+@mixin flex-center-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-@mixin tablet {
-  @media screen and (min-width: $tablet-breakpoint) {
-    @content;
-  }
+@mixin flex-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-@mixin desktop {
-  @media screen and (min-width: $desktop-breakpoint) {
-    @content;
+@mixin media($breakpoint) {
+  @if $breakpoint == $mobile-breakpoint {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  } @else if $breakpoint == $tablet-breakpoint {
+    @media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint) {
+      @content;
+    }
+  } @else if $breakpoint == $desktop-breakpoint {
+    @media (min-width: $desktop-breakpoint) {
+      @content;
+    }
   }
 }
 

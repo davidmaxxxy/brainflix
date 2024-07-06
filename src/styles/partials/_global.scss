@@ -1,23 +1,28 @@
+// styles/partials/_global.scss
+
 @use "./variables" as *;
 @use "./mixins" as *;
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProBold.ttf")
+    format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Avenir Next";
-  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProDemi.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: normal;
 }
@@ -55,7 +60,7 @@ h3 {
   font-family: "Avenir Next", sans-serif;
 
   @include media($tablet-breakpoint) {
-    font-size: $wide-screen-body-text-size;
+    font-size: 18px;
     font-weight: $wide-screen-body-text-weight;
     line-height: $wide-screen-body-line-height;
   }
@@ -86,6 +91,7 @@ a {
     font-size: $wide-screen-body-text-size;
     font-weight: $wide-screen-body-text-weight;
     line-height: $wide-screen-body-line-height;
+    color: $primary-color-white;
   }
 
   &:hover {
