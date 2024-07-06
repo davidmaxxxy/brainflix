@@ -1,4 +1,5 @@
 @use "./mixins" as *;
+@use "./variables" as *;
 
 .header {
   @include flex-center-column;
@@ -7,9 +8,13 @@
 
   &__logo {
     width: 80%;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: $mobile-page-header-text-size;
+    // font-weight: bold;
     border: solid pink;
+
+    &--brainflix-logo {
+      height: 2.5rem;
+    }
   }
 
   &__search-user {
@@ -25,6 +30,8 @@
     border: 1px solid #ccc;
     margin-right: 1rem;
     border: solid blue;
+    font-size: $mobile-subheader-text-size;
+    font-weight: $mobile-subheader-text-weight;
   }
 
   &__user-logo {
@@ -42,24 +49,25 @@
 
   &__uploader__button {
     width: 100%;
-    background-color: #3795ff;
-    color: white;
+    background-color: $primary-color-blue;
+    color: $primary-color-white;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
+    font-size: $mobile-subheader-text-size;
+    font-weight: $mobile-subheader-text-weight;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    svg {
-      margin-right: 0.5rem;
-    }
+    border: solid red;
 
-    // &--upload-icon {
-    //   width: 24px;
-    //   height: 24px;
-    //   color: white;
-    // }
+    &--text {
+      width: 80%;
+      font-size: $mobile-button-text-size;
+      font-weight: $mobile-button-text-weight;
+      border: solid red;
+    }
   }
 }

@@ -4,8 +4,8 @@ const Uploader = () => {
   return (
     <div className="header__uploader">
       <button className="header__uploader__button">
-        <UploadIcon color={"white"} />
-        <span>Upload</span>
+        <UploadIcon />
+        <p className="header__uploader__button--text">UPLOAD</p>
       </button>
     </div>
   );

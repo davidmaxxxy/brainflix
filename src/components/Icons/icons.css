@@ -1,6 +1,15 @@
 .upload-icon {
   width: 24px;
   height: 24px;
+  fill: #ffffff;
+  margin-right: 0.5rem;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  fill: #afafaf;
+  padding: 0 0.5rem;
 }
 
 .view-icon {
@@ -9,6 +18,11 @@
 }
 
 .heart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.add-icon {
   width: 24px;
   height: 24px;
 }/*# sourceMappingURL=icons.css.map */

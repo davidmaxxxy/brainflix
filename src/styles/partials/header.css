@@ -8,9 +8,11 @@
 }
 .header__logo {
   width: 80%;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 32px;
   border: solid pink;
+}
+.header__logo--brainflix-logo {
+  height: 2.5rem;
 }
 .header__search-user {
   width: 80%;
@@ -27,6 +29,8 @@
   border: 1px solid #ccc;
   margin-right: 1rem;
   border: solid blue;
+  font-size: 14px;
+  font-weight: 400;
 }
 .header__user-logo {
   width: 3rem;
@@ -42,15 +46,21 @@
 .header__uploader__button {
   width: 100%;
   background-color: #3795ff;
-  color: white;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: solid red;
 }
-.header__uploader__button svg {
-  margin-right: 0.5rem;
+.header__uploader__button--text {
+  width: 80%;
+  font-size: 16px;
+  font-weight: 700;
+  border: solid red;
 }/*# sourceMappingURL=header.css.map */

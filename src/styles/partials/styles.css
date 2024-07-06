@@ -23,8 +23,6 @@
 }
 .video-description__title h1 {
   text-align: left;
-  font-weight: bold;
-  font-size: 2rem;
   border: solid pink;
 }
 .video-description__details {
