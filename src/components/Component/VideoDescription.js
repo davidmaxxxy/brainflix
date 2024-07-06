@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/partials/styles.css";
+import ViewIcon from "../Icons/ViewIcon";
+import HeartIcon from "../Icons/HeartIcon";
 
 const VideoDescription = ({
   channel,
@@ -35,10 +37,10 @@ const VideoDescription = ({
         <div className="video-description__details--container">
           <div className="video-description__details--stats">
             <div className="video-description__details--stats__views">
-              <i className="fas fa-eye"></i> <h3>{views}</h3>
+              <ViewIcon color="black" /> <h3>{views}</h3>
             </div>
             <div className="video-description__details--stats__likes">
-              <i className="fas fa-heart"></i> <h3>{likes}</h3>
+              <HeartIcon color="black" /> <h3>{likes}</h3>
             </div>
           </div>
         </div>

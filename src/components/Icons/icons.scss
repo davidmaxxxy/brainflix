@@ -1,0 +1,23 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.upload-icon {
+  width: 24px;
+  height: 24px;
+  //   fill: $primary-color-blue;
+}
+
+.view-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.heart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.add-icon {
+  width: 24px;
+  height: 24px;
+}

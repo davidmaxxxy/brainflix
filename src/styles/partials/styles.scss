@@ -62,7 +62,6 @@
       justify-content: space-between;
 
       border: solid red;
-      // border-bottom: solid lightgrey;
 
       &__views {
         border: solid green;
@@ -135,12 +134,12 @@
           width: 100%;
           padding: 10px;
           margin-bottom: 10px;
-          // border: 1px solid $primary-color-silver;
+          border: 1px solid $primary-color-silver;
           border-radius: 4px;
-          // background-color: $secondary-color-albaster;
-          // font-size: $mobile-body-text-size;
-          // line-height: $mobile-body-line-height;
-          // font-weight: $mobile-body-text-weight;
+
+          font-size: $mobile-body-text-size;
+          line-height: $mobile-body-line-height;
+          font-weight: $mobile-body-text-weight;
 
           box-sizing: border-box;
 
@@ -154,18 +153,27 @@
           }
         }
 
-        input[type="submit"] {
+        button[type="submit"] {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           padding: 10px 20px;
           border: none;
           border-radius: 4px;
-          // background-color: $primary-color-bandsite-black;
+          background-color: $primary-color-blue;
           color: white;
-
           cursor: pointer;
           transition: background-color 0.3s ease;
 
+          svg {
+            margin-left: 0.5rem;
+            width: 20px;
+            height: 20px;
+            fill: white;
+          }
+
           &:hover {
-            background-color: darken($primary-color-bandsite-black, 10%);
+            background-color: darken($primary-color-black, 10%);
           }
         }
       }
@@ -175,7 +183,7 @@
       height: 36px;
       width: 36px;
       border-radius: 50%;
-      background-color: $secondary-color-silver;
+      // background-color: $secondary-color-silver;
       overflow: hidden;
       margin-top: 2rem;
 
@@ -203,13 +211,13 @@
     @include flex-center-row;
     align-items: flex-start;
     padding: 1rem 0;
-    border-bottom: 1px solid $secondary-color-silver;
+    border-bottom: 1px solid;
 
     &--img-container {
       height: 36px;
       width: 36px;
       border-radius: 50%;
-      background-color: $secondary-color-silver;
+      background-color: lightgray;
       overflow: hidden;
       margin-top: 0.5rem;
 
@@ -233,8 +241,6 @@
       justify-content: space-between;
 
       p {
-        &:nth-child(1) {
-        }
         &:nth-child(2) {
           color: $primary-color-silver;
         }
@@ -242,7 +248,7 @@
     }
 
     &--content {
-      color: $primary-color-bandsite-black;
+      color: $primary-color-black;
       width: 100%;
       box-sizing: border-box;
     }
@@ -261,9 +267,6 @@
   }
 }
 
-/* Update styles.scss to include NextVideos styles */
-
-/* Update styles.scss to include NextVideos styles */
 .next-videos {
   width: 100%;
   border: solid red;
@@ -313,7 +316,6 @@
   /* Add styles for video creator name here */
 }
 
-/* Assuming you'll replace `<image>` with an actual image element */
 .next-videos__video-container--video-img img {
   width: 100%;
   height: auto; /* Maintain aspect ratio */

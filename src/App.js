@@ -10,6 +10,7 @@ import Header from "./components/Component/Header";
 import Video from "./components/Component/Video";
 import videoDetails from "./data/video-details.json";
 import videosJSON from "./data/videos.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 console.log(videoDetails[0]);
 console.log(videosJSON[0]);
@@ -24,24 +25,27 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header />
-      <Video image={mainVideo.image} />
-      <VideoDescription
-        title={mainVideo.title}
-        channel={mainVideo.channel}
-        timestamp={mainVideo.timestamp}
-        views={mainVideo.views}
-        likes={mainVideo.likes}
-        description={mainVideo.description}
-      />
-      <Comments comments={mainVideo.comments} />
-      <NextVideos
-        handleNextVideo={handleNextVideo}
-        videos={videos}
-        mainVidoeId={mainVideo.id}
-      />
-    </div>
+    <>
+      
+      <div className="App">
+        <Header />
+        <Video image={mainVideo.image} />
+        <VideoDescription
+          title={mainVideo.title}
+          channel={mainVideo.channel}
+          timestamp={mainVideo.timestamp}
+          views={mainVideo.views}
+          likes={mainVideo.likes}
+          description={mainVideo.description}
+        />
+        <Comments comments={mainVideo.comments} />
+        <NextVideos
+          handleNextVideo={handleNextVideo}
+          videos={videos}
+          mainVidoeId={mainVideo.id}
+        />
+      </div>
+    </>
   );
 }
 

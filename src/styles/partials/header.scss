@@ -1,6 +1,4 @@
-@use "./variables" as *;
 @use "./mixins" as *;
-@use "./global" as *;
 
 .header {
   @include flex-center-column;
@@ -35,6 +33,7 @@
     border-radius: 50%;
     border: solid blue;
   }
+
   &__uploader {
     width: 80%;
     margin: 0.5rem 0;
@@ -49,5 +48,18 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+
+    // &--upload-icon {
+    //   width: 24px;
+    //   height: 24px;
+    //   color: white;
+    // }
   }
 }

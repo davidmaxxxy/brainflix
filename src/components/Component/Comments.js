@@ -1,3 +1,5 @@
+import AddIcon from "../Icons/AddIcon";
+
 const Comments = ({ comments }) => {
   return (
     <section className="commentForm-section">
@@ -29,7 +31,10 @@ const Comments = ({ comments }) => {
               name="comment"
               placeholder="Add a new comment"
             ></textarea>
-            <input type="submit" id="submit-comment" value="Comment" />
+            <button type="submit" id="submit-comment" className="submit-button">
+              <AddIcon />
+              Comment
+            </button>
           </form>
         </div>
       </div>
