@@ -5,7 +5,9 @@ const NextVideos = ({ videos, mainVidoeId, handleNextVideo }) => {
 
   return (
     <section className="next-videos">
-      <div className="next-videos__title">Next Videos</div>
+      <div className="next-videos__title">
+        <h3 className="h3-light-gray">NEXT VIDEOS</h3>
+      </div>
       <div className="next-videos__list">
         {filteredVideosArray.map((video) => (
           <div
@@ -17,12 +19,12 @@ const NextVideos = ({ videos, mainVidoeId, handleNextVideo }) => {
               <img src={video.image} alt={video.title} />
             </div>
             <div className="next-videos__video-container--video-desc">
-              <p className="next-videos__video-container--video-desc-bold">
+              <h3 className="next-videos__video-container--video-desc-bold">
                 {video.title}
-              </p>
-              <p className="next-videos__video-container--video-desc-standard">
+              </h3>
+              <h3 className="next-videos__video-container--video-desc-standard">
                 {video.channel}
-              </p>
+              </h3>
             </div>
           </div>
         ))}

@@ -4,50 +4,64 @@
   justify-content: center;
   flex-direction: column;
   padding: 1rem;
-  border: solid green;
 }
 .header__logo {
+  padding: 1rem;
   width: 80%;
   font-size: 36px;
-  border: solid pink;
 }
 .header__logo--brainflix-logo {
-  height: 2.5rem;
+  height: 3rem;
 }
-.header__search-user {
-  width: 80%;
+.header__search-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: row;
-  margin: 0.5rem 0;
-  border: solid pink;
-}
-.header__search {
+  align-items: center;
   width: 80%;
+  padding: 1rem;
+}
+.header__search-container--search-bar-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  border: solid #afafaf;
+  background-color: rgba(246, 243, 243, 0.55);
+  border-radius: 0.5rem;
+  width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  margin-right: 2rem;
+}
+.header__search-container--search-bar-wrapper--search {
+  padding: 0.5rem;
+  border: none;
   margin-right: 1rem;
-  border: solid blue;
   font-size: 20px;
   font-weight: 400;
+  background-color: rgba(246, 243, 243, 0.55);
 }
-.header__user-logo {
-  width: 3rem;
-  height: 3rem;
+.header__search-container--search-bar-wrapper--search::-moz-placeholder {
+  color: #323232;
+}
+.header__search-container--search-bar-wrapper--search::placeholder {
+  color: #323232;
+}
+.header__search-container--search-bar-wrapper--user-logo {
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  border: solid blue;
 }
 .header__uploader {
   width: 80%;
   margin: 0.5rem 0;
-  border: solid pink;
 }
 .header__uploader__button {
   width: 100%;
   background-color: #3795ff;
   color: #ffffff;
-  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 5px;
   font-size: 20px;
@@ -56,11 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid red;
 }
 .header__uploader__button--text {
   width: 80%;
-  font-size: 16px;
-  font-weight: 700;
-  border: solid red;
 }/*# sourceMappingURL=header.css.map */

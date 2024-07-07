@@ -92,39 +92,38 @@
 .commentForm-section {
   padding: 2rem;
   min-height: 100vh;
-
+  border-bottom: solid lightgrey;
   @include flex-center-column;
-
-  border: solid blue;
 
   &__no-of-comments {
     width: 100%;
     text-align: left;
+    margin: 0;
   }
 
   &__title-container {
-    width: 57%;
-    // border: solid red;
+    width: 70%;
+    margin-top: 3rem;
     text-align: left;
   }
 
   &__form-section {
-    width: 90%;
+    width: 100%;
     @include flex-center-row;
     align-items: flex-start;
-    margin-bottom: 2rem;
+    //
 
     &--form-container {
       @include flex-center-row;
       align-items: flex-start;
-      width: 75%;
+      width: 100%;
 
       &--form {
         @include flex-center-column;
         align-items: flex-start;
         background-color: white;
         width: 100%;
-        margin-left: 1rem;
+        margin-left: 2rem;
 
         border-radius: 5px;
         box-sizing: border-box;
@@ -137,31 +136,27 @@
         input[type="text"],
         textarea {
           width: 100%;
+          height: 12rem;
           padding: 10px;
           margin-bottom: 10px;
           border: 1px solid $primary-color-silver;
           border-radius: 4px;
-
+          font-family: "Avenir Next";
           font-size: $mobile-body-text-size;
           line-height: $mobile-body-line-height;
           font-weight: $mobile-body-text-weight;
-
+          color: $primary-color-black;
           box-sizing: border-box;
+          resize: none;
 
           &:nth-child(4) {
             height: 200px;
           }
-          textarea {
-            resize: vertical;
-            max-width: 100%;
-            max-height: 150px;
-          }
         }
 
         button[type="submit"] {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flex-center-row;
+          width: 100%;
           padding: 10px 20px;
           border: none;
           border-radius: 4px;
@@ -169,12 +164,18 @@
           color: white;
           cursor: pointer;
           transition: background-color 0.3s ease;
+          margin-bottom: 2rem;
 
           svg {
             margin-left: 0.5rem;
             width: 20px;
             height: 20px;
             fill: white;
+          }
+
+          h3 {
+            width: 80%;
+            font-weight: 700;
           }
 
           &:hover {
@@ -185,12 +186,12 @@
     }
 
     &--img-container {
-      height: 36px;
-      width: 36px;
+      height: 4rem;
+      width: 4rem;
       border-radius: 50%;
-      // background-color: $secondary-color-silver;
+
       overflow: hidden;
-      margin-top: 2rem;
+      margin-top: 0.5rem;
 
       &--img {
         height: 100%;
@@ -203,45 +204,38 @@
 
   &__comments-section {
     @include flex-center-column;
-    width: 90%;
-    padding: 1rem;
-
-    // @include tablet {
-    //   width: 60%;
-    // }
   }
 
   &__comments-container {
-    width: 90%;
-    @include flex-center-row;
-    align-items: flex-start;
+    @include flex-row;
     padding: 1rem 0;
-    border-bottom: 1px solid;
+    border-top: solid $primary-color-silver;
 
     &--img-container {
-      height: 36px;
-      width: 36px;
-      border-radius: 50%;
-      background-color: lightgray;
-      overflow: hidden;
-      margin-top: 0.5rem;
+      @include flex-column;
 
       &--img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+        height: 4rem;
+        width: 4rem;
         border-radius: 50%;
+        overflow: hidden;
+        margin-top: 0.5rem;
+        background-color: $primary-color-silver;
       }
     }
 
     &--content-container {
-      width: 80%;
       @include flex-center-column;
+      width: 100%;
       margin-left: 1rem;
+
+      p {
+        text-align: left;
+      }
     }
 
     &--title-container {
-      width: 100%;
+      width: 90%;
       @include flex-center-row;
       justify-content: space-between;
 
@@ -253,76 +247,70 @@
     }
 
     &--content {
+      width: 90%;
       color: $primary-color-black;
-      width: 100%;
       box-sizing: border-box;
     }
   }
 
   &__like-delete-container {
     width: 100%;
-    border: solid red;
+
     @include flex-center-row;
     justify-content: flex-start;
 
     &--like-container {
       width: 20%;
-      border: solid red;
     }
   }
 }
 
 .next-videos {
-  width: 100%;
-  border: solid red;
-  margin-top: 1rem; /* Add some margin for spacing */
-}
-
-.next-videos__list {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to next line */
-  gap: 1rem; /* Add spacing between videos */
-  width: 100%;
-  border: solid pink;
-  justify-content: center;
-  align-items: center;
-}
-
-.next-videos__title {
-  font-weight: bold;
   margin-bottom: 0.5rem;
-}
+  padding: 2rem;
 
-.next-videos__video-container {
-  width: 80%;
-  display: flex; /* Make NextVideo a flex container */
-  border: 1px solid #ddd; /* Add a basic border for now */
-  padding: 0.5rem;
-}
+  &__list {
+    @include flex-center-column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
 
-.next-videos__video-container--video-img {
-  width: 40%;
-  /* Add styles for video thumbnail image here */
-}
+    justify-content: center;
+    align-items: center;
+  }
 
-.next-videos__video-container--video-desc {
-  flex: 1; /* Make content area take up remaining space */
-}
+  &__title {
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
 
-.next-videos__video-container--video-desc-bold {
-  font-weight: bold;
-  margin-bottom: 0.25rem;
-  /* Add styles for video title here */
-}
+  &__video-container {
+    display: flex;
 
-.next-videos__video-container--video-desc-standard {
-  font-size: 0.8rem;
-  color: #aaa;
-  /* Add styles for video creator name here */
-}
+    padding: 0.5rem;
 
-.next-videos__video-container--video-img img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Crop to fit container */
+    &--video-img {
+      width: 40%;
+      margin-right: 2rem;
+    }
+    &--video-desc {
+      flex: 1;
+    }
+    &--video-desc-bold {
+      text-align: left;
+      margin-bottom: 0.25rem;
+    }
+
+    &--video-desc-standard {
+      text-align: left;
+      font-weight: 400;
+    }
+
+    &--video-img img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+  }
 }

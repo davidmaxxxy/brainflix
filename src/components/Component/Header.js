@@ -10,10 +10,20 @@ const Header = () => {
         {" "}
         <img className="header__logo--brainflix-logo" src={logo}></img>
       </div>
-      <div className="header__search-user">
-        <SearchIcon />
-        <input type="text" placeholder="Search" className="header__search" />
-        <img src={userLogo} alt="User Logo" className="header__user-logo" />
+      <div className="header__search-container">
+        <div className="header__search-container--search-bar-wrapper">
+          <SearchIcon />
+          <input
+            type="text"
+            placeholder="Search"
+            className="header__search-container--search-bar-wrapper--search"
+          />
+        </div>
+        <img
+          src={userLogo}
+          alt="User Logo"
+          className="header__search-container--search-bar-wrapper--user-logo"
+        />
       </div>
       <Uploader />
     </header>

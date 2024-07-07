@@ -12,8 +12,8 @@
 
 @mixin flex-row {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: row;
 }
 
@@ -26,8 +26,8 @@
 
 @mixin flex-column {
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
 }
 

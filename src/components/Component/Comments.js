@@ -24,21 +24,15 @@ const Comments = ({ comments }) => {
             id="commentForm-section-form"
           >
             <label htmlFor="name"> </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Enter your name"
-            />
-            <label htmlFor="comment"> COMMENT </label>
             <textarea
+              className="commentForm-section__form-section--form-container--form--textarea"
               id="comment"
               name="comment"
               placeholder="Add a new comment"
             ></textarea>
             <button type="submit" id="submit-comment" className="submit-button">
               <AddIcon />
-              Comment
+              <h3>COMMENT</h3>
             </button>
           </form>
         </div>
@@ -50,7 +44,7 @@ const Comments = ({ comments }) => {
             className="commentForm-section__comments-container"
           >
             <div className="commentForm-section__comments-container--img-container">
-              <div className="commentForm-section__comments-container--img"></div>
+              <div className="commentForm-section__comments-container--img-container--img"></div>
             </div>
             <div className="commentForm-section__comments-container--content-container">
               <div className="commentForm-section__comments-container--title-container">

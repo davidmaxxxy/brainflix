@@ -4,54 +4,72 @@
 .header {
   @include flex-center-column;
   padding: 1rem;
-  border: solid green;
 
   &__logo {
+    padding: 1rem;
     width: 80%;
     font-size: $mobile-page-header-text-size;
-    // font-weight: bold;
-    border: solid pink;
 
     &--brainflix-logo {
-      height: 2.5rem;
+      height: 3rem;
+    }
+
+    @include media($tablet-breakpoint) {
+      font-size: $tablet-page-header-text-size;
+    }
+
+    @include media($desktop-breakpoint) {
+      font-size: $desktop-page-header-text-size;
+      width: 60%;
     }
   }
 
-  &__search-user {
+  &__search-container {
+    @include flex-row;
+    align-items: center;
     width: 80%;
-    @include flex-center-row;
-    margin: 0.5rem 0;
-    border: solid pink;
-  }
+    padding: 1rem;
 
-  &__search {
-    width: 80%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    margin-right: 1rem;
-    border: solid blue;
-    font-size: $mobile-subheader-text-size;
-    font-weight: $mobile-subheader-text-weight;
-  }
+    &--search-bar-wrapper {
+      @include flex-row;
+      align-items: center;
+      border: solid $primary-color-silver;
+      background-color: rgba(246, 243, 243, 0.55);
+      border-radius: 0.5rem;
+      width: 100%;
+      padding: 0.5rem;
+      margin-right: 2rem;
 
-  &__user-logo {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: solid blue;
+      &--search {
+        padding: 0.5rem;
+        border: none;
+        margin-right: 1rem;
+        font-size: $mobile-subheader-text-size;
+        font-weight: $mobile-subheader-text-weight;
+        background-color: rgba(246, 243, 243, 0.55);
+
+        &::placeholder {
+          color: $primary-color-black;
+        }
+      }
+
+      &--user-logo {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+    }
   }
 
   &__uploader {
     width: 80%;
     margin: 0.5rem 0;
-    border: solid pink;
   }
 
   &__uploader__button {
     width: 100%;
     background-color: $primary-color-blue;
     color: $primary-color-white;
-    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
     font-size: $mobile-subheader-text-size;
@@ -61,13 +79,8 @@
     align-items: center;
     justify-content: center;
 
-    border: solid red;
-
     &--text {
       width: 80%;
-      font-size: $mobile-button-text-size;
-      font-weight: $mobile-button-text-weight;
-      border: solid red;
     }
   }
 }

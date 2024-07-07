@@ -5,7 +5,7 @@ const Uploader = () => {
     <div className="header__uploader">
       <button className="header__uploader__button">
         <UploadIcon />
-        <p className="header__uploader__button--text">UPLOAD</p>
+        <h3 className="header__uploader__button--text">UPLOAD</h3>
       </button>
     </div>
   );
