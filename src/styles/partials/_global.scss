@@ -67,6 +67,10 @@ h3 {
 }
 
 .h3-light-gray {
+  font-size: $mobile-section-header-text-size;
+  font-weight: $mobile-section-header-text-weight;
+  line-height: $mobile-section-header-line-height;
+  font-family: "Avenir Next", sans-serif;
   color: $primary-color-silver;
 }
 

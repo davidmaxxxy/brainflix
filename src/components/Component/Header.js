@@ -7,8 +7,11 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__logo">
-        {" "}
-        <img className="header__logo--brainflix-logo" src={logo}></img>
+        <img
+          className="header__logo--brainflix-logo"
+          src={logo}
+          alt="BrainFlix Logo"
+        />
       </div>
       <div className="header__search-container">
         <div className="header__search-container--search-bar-wrapper">
@@ -19,13 +22,15 @@ const Header = () => {
             className="header__search-container--search-bar-wrapper--search"
           />
         </div>
-        <img
-          src={userLogo}
-          alt="User Logo"
-          className="header__search-container--search-bar-wrapper--user-logo"
-        />
       </div>
-      <Uploader />
+      <img
+        src={userLogo}
+        alt="User Logo"
+        className="header__search-container--user-logo"
+      />
+      <div className="header__uploader">
+        <Uploader />
+      </div>
     </header>
   );
 };

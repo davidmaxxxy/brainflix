@@ -2,33 +2,59 @@
 @use "./variables" as *;
 
 .header {
-  @include flex-center-column;
+  @include flex-center-row;
+  flex-wrap: wrap;
   padding: 1rem;
+  border: solid red;
+
+  @include media($tablet-breakpoint) {
+    justify-content: space-between;
+  }
+
+  @include media($desktop-breakpoint) {
+    padding: 1rem 5rem;
+  }
 
   &__logo {
     padding: 1rem;
     width: 80%;
     font-size: $mobile-page-header-text-size;
+    border: solid red;
+
+    @include media($tablet-breakpoint) {
+      width: auto;
+      margin-right: auto;
+      order: 1;
+      padding: 0;
+    }
 
     &--brainflix-logo {
       height: 3rem;
-    }
 
-    @include media($tablet-breakpoint) {
-      font-size: $tablet-page-header-text-size;
-    }
-
-    @include media($desktop-breakpoint) {
-      font-size: $desktop-page-header-text-size;
-      width: 60%;
+      @include media($tablet-breakpoint) {
+        height: 2.5rem;
+      }
     }
   }
 
   &__search-container {
     @include flex-row;
     align-items: center;
-    width: 80%;
     padding: 1rem;
+    border: solid green;
+    width: 65%;
+
+    @include media($tablet-breakpoint) {
+      @include flex-center-column;
+      width: 30%;
+      margin-right: auto;
+      order: 2;
+      padding: 0;
+    }
+
+    @include media($desktop-breakpoint) {
+      margin-right: 1rem;
+    }
 
     &--search-bar-wrapper {
       @include flex-row;
@@ -38,35 +64,58 @@
       border-radius: 0.5rem;
       width: 100%;
       padding: 0.5rem;
-      margin-right: 2rem;
+
+      @include media($tablet-breakpoint) {
+        width: 90%;
+      }
 
       &--search {
         padding: 0.5rem;
         border: none;
-        margin-right: 1rem;
         font-size: $mobile-subheader-text-size;
         font-weight: $mobile-subheader-text-weight;
         background-color: rgba(246, 243, 243, 0.55);
+        width: 100%;
 
         &::placeholder {
           color: $primary-color-black;
         }
       }
+    }
 
-      &--user-logo {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
+    &--user-logo {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: solid red;
+
+      @include media($tablet-breakpoint) {
+        margin-left: 1rem;
+        order: 4;
       }
     }
   }
 
   &__uploader {
-    width: 80%;
+    @include flex-center-column;
+    width: auto;
     margin: 0.5rem 0;
+    border: solid red;
+
+    @include media($tablet-breakpoint) {
+      @include flex-center-column;
+      min-width: 6rem;
+      margin: 0;
+      order: 3;
+    }
+
+    @include media($desktop-breakpoint) {
+      min-width: 15rem;
+    }
   }
 
   &__uploader__button {
+    @include flex-center-row;
     width: 100%;
     background-color: $primary-color-blue;
     color: $primary-color-white;
@@ -75,12 +124,18 @@
     font-size: $mobile-subheader-text-size;
     font-weight: $mobile-subheader-text-weight;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    @include media($tablet-breakpoint) {
+      width: 100%;
+    }
+
+    @include media($desktop-breakpoint) {
+      width: 100%;
+    }
 
     &--text {
       width: 80%;
+      font-weight: 700;
     }
   }
 }

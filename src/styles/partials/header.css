@@ -2,16 +2,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 1rem;
+  border: solid red;
+}
+@media (min-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1025px) {
+  .header {
+    padding: 1rem 5rem;
+  }
 }
 .header__logo {
   padding: 1rem;
   width: 80%;
   font-size: 36px;
+  border: solid red;
+}
+@media (min-width: 768px) {
+  .header__logo {
+    width: auto;
+    margin-right: auto;
+    order: 1;
+    padding: 0;
+  }
 }
 .header__logo--brainflix-logo {
   height: 3rem;
+}
+@media (min-width: 768px) {
+  .header__logo--brainflix-logo {
+    height: 2.5rem;
+  }
 }
 .header__search-container {
   display: flex;
@@ -19,8 +45,26 @@
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
-  width: 80%;
   padding: 1rem;
+  border: solid green;
+  width: 65%;
+}
+@media (min-width: 768px) {
+  .header__search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    margin-right: auto;
+    order: 2;
+    padding: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .header__search-container {
+    margin-right: 1rem;
+  }
 }
 .header__search-container--search-bar-wrapper {
   display: flex;
@@ -33,15 +77,19 @@
   border-radius: 0.5rem;
   width: 100%;
   padding: 0.5rem;
-  margin-right: 2rem;
+}
+@media (min-width: 768px) {
+  .header__search-container--search-bar-wrapper {
+    width: 90%;
+  }
 }
 .header__search-container--search-bar-wrapper--search {
   padding: 0.5rem;
   border: none;
-  margin-right: 1rem;
   font-size: 20px;
   font-weight: 400;
   background-color: rgba(246, 243, 243, 0.55);
+  width: 100%;
 }
 .header__search-container--search-bar-wrapper--search::-moz-placeholder {
   color: #323232;
@@ -49,16 +97,48 @@
 .header__search-container--search-bar-wrapper--search::placeholder {
   color: #323232;
 }
-.header__search-container--search-bar-wrapper--user-logo {
+.header__search-container--user-logo {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
+  border: solid red;
+}
+@media (min-width: 768px) {
+  .header__search-container--user-logo {
+    margin-left: 1rem;
+    order: 4;
+  }
 }
 .header__uploader {
-  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
   margin: 0.5rem 0;
+  border: solid red;
+}
+@media (min-width: 768px) {
+  .header__uploader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 6rem;
+    margin: 0;
+    order: 3;
+  }
+}
+@media (min-width: 1025px) {
+  .header__uploader {
+    min-width: 15rem;
+  }
 }
 .header__uploader__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   width: 100%;
   background-color: #3795ff;
   color: #ffffff;
@@ -67,10 +147,18 @@
   font-size: 20px;
   font-weight: 400;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+@media (min-width: 768px) {
+  .header__uploader__button {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .header__uploader__button {
+    width: 100%;
+  }
 }
 .header__uploader__button--text {
   width: 80%;
+  font-weight: 700;
 }/*# sourceMappingURL=header.css.map */

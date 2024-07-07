@@ -2,27 +2,57 @@
 @use "./mixins" as *;
 @use "./global" as *;
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+
+  @include media($desktop-breakpoint) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &__left {
+    flex: 1;
+    padding: 1rem;
+  }
+
+  &__right {
+    width: 100%;
+    padding: 1rem;
+
+    @include media($desktop-breakpoint) {
+      width: 30%;
+      border-left: solid $primary-color-silver;
+    }
+  }
+}
+
 .video {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
   overflow: hidden;
+  background-color: black;
 
   &__player {
-    position: absolute;
+    display: flex;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
+
+    @include media($desktop-breakpoint) {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
   }
 }
 
 .video-description {
-  padding: 2rem;
+  padding: 1rem 10rem;
 
   &__title {
     margin-bottom: 0.5rem;
-    border-bottom: solid lightgrey;
+    border-bottom: solid $primary-color-silver;
     @include flex-column;
 
     h1 {
@@ -35,9 +65,11 @@
 
     &--container {
       @include flex-column;
-
-      // border: solid blue;
       width: 50%;
+
+      @include media($desktop-breakpoint) {
+        @include flex-row;
+      }
     }
 
     &--creator {
@@ -46,6 +78,11 @@
       h3 {
         margin: 0;
         text-align: left;
+        font-weight: 700;
+      }
+
+      @include media($tablet-breakpoint) {
+        margin-right: 1rem;
       }
     }
     &--date {
@@ -61,11 +98,22 @@
     &--stats {
       @include flex-column;
       justify-content: space-between;
+      align-items: flex-end;
+
+      @include media($tablet-breakpoint) {
+        @include flex-row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-right: 1rem;
+      }
 
       &__views {
         @include flex-row;
-
         margin: 1rem 0;
+
+        @include media($tablet-breakpoint) {
+          margin-right: 1rem;
+        }
 
         h3 {
           margin: 0;
@@ -90,33 +138,51 @@
 }
 
 .commentForm-section {
-  padding: 2rem;
+  padding: 1rem 10rem;
   min-height: 100vh;
-  border-bottom: solid lightgrey;
   @include flex-center-column;
 
   &__no-of-comments {
     width: 100%;
     text-align: left;
     margin: 0;
+
+    @include media($tablet-breakpoint) {
+      font-weight: 700;
+    }
   }
 
   &__title-container {
     width: 70%;
     margin-top: 3rem;
     text-align: left;
+
+    @include media($desktop-breakpoint) {
+      width: 80%;
+      margin: 2rem 0 0.5rem 0;
+    }
   }
 
   &__form-section {
     width: 100%;
     @include flex-center-row;
     align-items: flex-start;
-    //
+    padding-bottom: 2rem;
+    border-bottom: solid $primary-color-silver;
+
+    @include media($tablet-breakpoint) {
+      @include flex-center-row;
+    }
 
     &--form-container {
       @include flex-center-row;
       align-items: flex-start;
       width: 100%;
+
+      @include media($desktop-breakpoint) {
+        @include flex-center-row;
+        width: 100%;
+      }
 
       &--form {
         @include flex-center-column;
@@ -124,9 +190,12 @@
         background-color: white;
         width: 100%;
         margin-left: 2rem;
-
         border-radius: 5px;
         box-sizing: border-box;
+
+        @include media($tablet-breakpoint) {
+          @include flex-center-row;
+        }
 
         label {
           font-size: 14px;
@@ -149,6 +218,13 @@
           box-sizing: border-box;
           resize: none;
 
+          @include media($tablet-breakpoint) {
+            height: 3rem;
+            width: 60%;
+            margin-bottom: 0;
+            margin-right: 2rem;
+          }
+
           &:nth-child(4) {
             height: 200px;
           }
@@ -165,6 +241,12 @@
           cursor: pointer;
           transition: background-color 0.3s ease;
           margin-bottom: 2rem;
+
+          @include media($tablet-breakpoint) {
+            height: 3rem;
+            width: 30%;
+            margin-bottom: 0;
+          }
 
           svg {
             margin-left: 0.5rem;
@@ -204,12 +286,15 @@
 
   &__comments-section {
     @include flex-center-column;
+    width: 100%;
+    border: solid red;
   }
 
   &__comments-container {
     @include flex-row;
     padding: 1rem 0;
-    border-top: solid $primary-color-silver;
+    border-bottom: solid $primary-color-silver;
+    width: 100%;
 
     &--img-container {
       @include flex-column;
@@ -240,8 +325,11 @@
       justify-content: space-between;
 
       p {
+        font-weight: 700;
+
         &:nth-child(2) {
           color: $primary-color-silver;
+          font-weight: 400;
         }
       }
     }
@@ -293,12 +381,14 @@
       width: 40%;
       margin-right: 2rem;
     }
+
     &--video-desc {
       flex: 1;
     }
     &--video-desc-bold {
       text-align: left;
       margin-bottom: 0.25rem;
+      font-weight: 700;
     }
 
     &--video-desc-standard {
