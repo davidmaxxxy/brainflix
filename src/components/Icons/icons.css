@@ -26,7 +26,7 @@ h1 {
   h1 {
     font-size: 42px;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 44px;
   }
 }
 
@@ -63,7 +63,7 @@ h3 {
   font-weight: 600;
   line-height: 22px;
   font-family: "Avenir Next", sans-serif;
-  color: #afafaf;
+  color: rgb(201, 197, 197);
 }
 
 p {
@@ -125,14 +125,14 @@ body {
   width: 24px;
   height: 24px;
   margin-right: 1rem;
-  fill: #afafaf;
+  fill: rgb(201, 197, 197);
 }
 
 .heart-icon {
   width: 24px;
   height: 24px;
   margin-right: 1rem;
-  fill: #afafaf;
+  fill: rgb(201, 197, 197);
 }
 
 .add-icon {

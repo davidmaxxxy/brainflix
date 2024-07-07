@@ -26,7 +26,7 @@ h1 {
   h1 {
     font-size: 42px;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 44px;
   }
 }
 
@@ -63,7 +63,7 @@ h3 {
   font-weight: 600;
   line-height: 22px;
   font-family: "Avenir Next", sans-serif;
-  color: #afafaf;
+  color: rgb(201, 197, 197);
 }
 
 p {
@@ -128,7 +128,7 @@ body {
 @media (min-width: 1025px) {
   .main-content__right {
     width: 30%;
-    border-left: solid #afafaf;
+    border-left: solid rgb(201, 197, 197);
   }
 }
 
@@ -155,9 +155,14 @@ body {
 .video-description {
   padding: 1rem 10rem;
 }
+@media (min-width: 768px) {
+  .video-description {
+    padding: 1rem 5rem;
+  }
+}
 .video-description__title {
   margin-bottom: 0.5rem;
-  border-bottom: solid #afafaf;
+  border-bottom: solid rgb(201, 197, 197);
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -194,6 +199,7 @@ body {
   margin: 0;
   text-align: left;
   font-weight: 700;
+  font-size: 24px;
 }
 @media (min-width: 768px) {
   .video-description__details--creator {
@@ -259,11 +265,15 @@ body {
 
 .commentForm-section {
   padding: 1rem 10rem;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+@media (min-width: 768px) {
+  .commentForm-section {
+    padding: 1rem 5rem;
+  }
 }
 .commentForm-section__no-of-comments {
   width: 100%;
@@ -282,7 +292,7 @@ body {
 }
 @media (min-width: 1025px) {
   .commentForm-section__title-container {
-    width: 80%;
+    width: 75%;
     margin: 2rem 0 0.5rem 0;
   }
 }
@@ -294,7 +304,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   padding-bottom: 2rem;
-  border-bottom: solid #afafaf;
+  border-bottom: solid rgb(201, 197, 197);
 }
 @media (min-width: 768px) {
   .commentForm-section__form-section {
@@ -351,7 +361,7 @@ body {
   height: 12rem;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #afafaf;
+  border: 1px solid rgb(201, 197, 197);
   border-radius: 4px;
   font-family: "Avenir Next";
   font-size: 18px;
@@ -429,7 +439,6 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  border: solid red;
 }
 .commentForm-section__comments-container {
   display: flex;
@@ -437,7 +446,7 @@ body {
   justify-content: flex-start;
   flex-direction: row;
   padding: 1rem 0;
-  border-bottom: solid #afafaf;
+  border-bottom: solid rgb(201, 197, 197);
   width: 100%;
 }
 .commentForm-section__comments-container--img-container {
@@ -452,7 +461,7 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin-top: 0.5rem;
-  background-color: #afafaf;
+  background-color: rgb(201, 197, 197);
 }
 .commentForm-section__comments-container--content-container {
   display: flex;
@@ -477,7 +486,7 @@ body {
   font-weight: 700;
 }
 .commentForm-section__comments-container--title-container p:nth-child(2) {
-  color: #afafaf;
+  color: rgb(201, 197, 197);
   font-weight: 400;
 }
 .commentForm-section__comments-container--content {
@@ -501,6 +510,11 @@ body {
   margin-bottom: 0.5rem;
   padding: 2rem;
 }
+@media (min-width: 1025px) {
+  .next-videos {
+    padding: 0;
+  }
+}
 .next-videos__list {
   display: flex;
   align-items: center;
@@ -519,22 +533,35 @@ body {
 .next-videos__video-container {
   display: flex;
   padding: 0.5rem;
+  cursor: pointer;
 }
 .next-videos__video-container--video-img {
   width: 40%;
   margin-right: 2rem;
 }
+@media (min-width: 768px) {
+  .next-videos__video-container--video-img {
+    margin-right: 1rem;
+  }
+}
 .next-videos__video-container--video-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex: 1;
 }
 .next-videos__video-container--video-desc-bold {
   text-align: left;
-  margin-bottom: 0.25rem;
   font-weight: 700;
+  margin: 0.5rem 0;
 }
 .next-videos__video-container--video-desc-standard {
   text-align: left;
   font-weight: 400;
+  margin: 0;
 }
 .next-videos__video-container--video-img img {
   width: 100%;

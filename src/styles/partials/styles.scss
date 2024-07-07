@@ -50,6 +50,10 @@
 .video-description {
   padding: 1rem 10rem;
 
+  @include media($tablet-breakpoint) {
+    padding: 1rem 5rem;
+  }
+
   &__title {
     margin-bottom: 0.5rem;
     border-bottom: solid $primary-color-silver;
@@ -79,6 +83,7 @@
         margin: 0;
         text-align: left;
         font-weight: 700;
+        font-size: $wide-screen-subheader-text-size;
       }
 
       @include media($tablet-breakpoint) {
@@ -139,8 +144,11 @@
 
 .commentForm-section {
   padding: 1rem 10rem;
-  min-height: 100vh;
   @include flex-center-column;
+
+  @include media($tablet-breakpoint) {
+    padding: 1rem 5rem;
+  }
 
   &__no-of-comments {
     width: 100%;
@@ -158,8 +166,9 @@
     text-align: left;
 
     @include media($desktop-breakpoint) {
-      width: 80%;
+      width: 75%;
       margin: 2rem 0 0.5rem 0;
+      // border: solid red;
     }
   }
 
@@ -287,7 +296,6 @@
   &__comments-section {
     @include flex-center-column;
     width: 100%;
-    border: solid red;
   }
 
   &__comments-container {
@@ -357,6 +365,10 @@
   margin-bottom: 0.5rem;
   padding: 2rem;
 
+  @include media($desktop-breakpoint) {
+    padding: 0;
+  }
+
   &__list {
     @include flex-center-column;
     flex-wrap: wrap;
@@ -374,26 +386,34 @@
 
   &__video-container {
     display: flex;
-
     padding: 0.5rem;
+    cursor: pointer;
 
     &--video-img {
       width: 40%;
       margin-right: 2rem;
+
+      @include media($tablet-breakpoint) {
+        margin-right: 1rem;
+      }
     }
 
     &--video-desc {
+      @include flex-center-column;
+      align-items: flex-start;
+      justify-content: flex-start;
       flex: 1;
     }
     &--video-desc-bold {
       text-align: left;
-      margin-bottom: 0.25rem;
       font-weight: 700;
+      margin: 0.5rem 0;
     }
 
     &--video-desc-standard {
       text-align: left;
       font-weight: 400;
+      margin: 0;
     }
 
     &--video-img img {
