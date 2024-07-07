@@ -44,7 +44,7 @@
     @include media($tablet-breakpoint) {
       @include flex-center-column;
       width: 30%;
-      margin-right: auto;
+      margin-right: 2rem;
       order: 2;
       padding: 0;
     }
@@ -94,43 +94,43 @@
 
   &__uploader {
     @include flex-center-column;
-    width: auto;
+    width: 90%;
     margin: 0.5rem 0;
 
     @include media($tablet-breakpoint) {
       @include flex-center-column;
-      min-width: 6rem;
+      width: 10rem;
       margin: 0;
       order: 3;
     }
 
     @include media($desktop-breakpoint) {
-      min-width: 15rem;
+      width: 10rem;
     }
-  }
 
-  &__uploader__button {
-    @include flex-center-row;
-    width: 100%;
-    background-color: $primary-color-blue;
-    color: $primary-color-white;
-    border: none;
-    border-radius: 5px;
-    font-size: $mobile-subheader-text-size;
-    font-weight: $mobile-subheader-text-weight;
-    cursor: pointer;
-
-    @include media($tablet-breakpoint) {
+    &__button {
+      @include flex-center-row;
       width: 100%;
-    }
+      background-color: $primary-color-blue;
+      color: $primary-color-white;
+      border: none;
+      border-radius: 5px;
+      font-size: $mobile-subheader-text-size;
+      font-weight: $mobile-subheader-text-weight;
+      cursor: pointer;
 
-    @include media($desktop-breakpoint) {
-      width: 100%;
-    }
+      @include media($tablet-breakpoint) {
+        width: 9rem;
+      }
 
-    &--text {
-      width: 80%;
-      font-weight: 700;
+      @include media($desktop-breakpoint) {
+        width: 10rem;
+      }
+
+      &--text {
+        width: 80%;
+        font-weight: 700;
+      }
     }
   }
 }

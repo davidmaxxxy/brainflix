@@ -13,16 +13,22 @@
 
   &__left {
     flex: 1;
-    padding: 1rem;
+    padding: 0rem;
+
+    @include media($desktop-breakpoint) {
+      flex: 1;
+      padding: 1rem;
+    }
   }
 
   &__right {
     width: 100%;
-    padding: 1rem;
+    padding: 0rem;
 
     @include media($desktop-breakpoint) {
       width: 30%;
       border-left: solid $primary-color-silver;
+      padding: 0;
     }
   }
 }
@@ -48,7 +54,7 @@
 }
 
 .video-description {
-  padding: 1rem 10rem;
+  padding: 2rem;
 
   @include media($tablet-breakpoint) {
     padding: 1rem 5rem;
@@ -143,7 +149,7 @@
 }
 
 .commentForm-section {
-  padding: 1rem 10rem;
+  padding: 2rem;
   @include flex-center-column;
 
   @include media($tablet-breakpoint) {

@@ -119,16 +119,23 @@ body {
 }
 .main-content__left {
   flex: 1;
-  padding: 1rem;
+  padding: 0rem;
+}
+@media (min-width: 1025px) {
+  .main-content__left {
+    flex: 1;
+    padding: 1rem;
+  }
 }
 .main-content__right {
   width: 100%;
-  padding: 1rem;
+  padding: 0rem;
 }
 @media (min-width: 1025px) {
   .main-content__right {
     width: 30%;
     border-left: solid rgb(201, 197, 197);
+    padding: 0;
   }
 }
 
@@ -153,7 +160,7 @@ body {
 }
 
 .video-description {
-  padding: 1rem 10rem;
+  padding: 2rem;
 }
 @media (min-width: 768px) {
   .video-description {
@@ -264,7 +271,7 @@ body {
 }
 
 .commentForm-section {
-  padding: 1rem 10rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
