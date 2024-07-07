@@ -17,7 +17,7 @@
   font-style: normal;
 }
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   font-family: "Avenir Next", sans-serif;
   line-height: 32px;
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 22px;
   font-family: "Avenir Next", sans-serif;
@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 22px;
   font-family: "Avenir Next", sans-serif;
@@ -58,11 +58,15 @@ h3 {
   }
 }
 
+.h3-light-gray {
+  color: #afafaf;
+}
+
 p {
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 400;
   font-family: "Avenir Next", sans-serif;
-  line-height: 18px;
+  line-height: 22px;
 }
 @media (min-width: 768px) and (max-width: 1025px) {
   p {
@@ -73,10 +77,10 @@ p {
 }
 
 a {
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 400;
   font-family: "Avenir Next", sans-serif;
-  line-height: 18px;
+  line-height: 22px;
   text-decoration: none;
   color: #ffffff;
 }
@@ -116,11 +120,15 @@ body {
 .view-icon {
   width: 24px;
   height: 24px;
+  margin-right: 1rem;
+  fill: #afafaf;
 }
 
 .heart-icon {
   width: 24px;
   height: 24px;
+  margin-right: 1rem;
+  fill: #afafaf;
 }
 
 .add-icon {

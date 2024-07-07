@@ -21,11 +21,11 @@ const VideoDescription = ({
         <div className="video-description__details--container">
           <div className="video-description__details--creator">
             {" "}
-            <h3>By {channel}</h3>{" "}
+            <h3 className="h3-black-bold">By {channel}</h3>
           </div>
           <div className="video-description__details--date">
             {" "}
-            <h3>
+            <h3 className="h3-light-gray">
               {new Date(timestamp).toLocaleDateString("en-US", {
                 month: "numeric",
                 day: "numeric",
@@ -37,16 +37,16 @@ const VideoDescription = ({
         <div className="video-description__details--container">
           <div className="video-description__details--stats">
             <div className="video-description__details--stats__views">
-              <ViewIcon color="black" /> <h3>{views}</h3>
+              <ViewIcon /> <h3 className="h3-light-gray">{views}</h3>
             </div>
             <div className="video-description__details--stats__likes">
-              <HeartIcon color="black" /> <h3>{likes}</h3>
+              <HeartIcon /> <h3 className="h3-light-gray">{likes}</h3>
             </div>
           </div>
         </div>
       </div>
       <div className="video-description__description-content">
-        <h3>{description}</h3>
+        <p>{description}</p>
       </div>
     </section>
   );

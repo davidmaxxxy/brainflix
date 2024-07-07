@@ -18,55 +18,64 @@
 }
 
 .video-description {
-  padding: 1rem;
-  border-bottom: 1px solid #ccc;
-  border: solid red;
+  padding: 2rem;
 
   &__title {
     margin-bottom: 0.5rem;
     border-bottom: solid lightgrey;
+    @include flex-column;
+
+    h1 {
+      text-align: left;
+    }
   }
 
   &__details {
     @include flex-center-row;
 
     &--container {
-      @include flex-center-column;
-      border: solid blue;
+      @include flex-column;
+
+      // border: solid blue;
       width: 50%;
     }
 
     &--creator {
-      border: solid pink;
+      margin: 1rem 0;
 
       h3 {
         margin: 0;
+        text-align: left;
       }
     }
     &--date {
       font-weight: bold;
-      border: solid red;
+      margin: 1rem 0;
+
       h3 {
         margin: 0;
+        text-align: left;
       }
     }
 
     &--stats {
-      @include flex-center-column;
+      @include flex-column;
       justify-content: space-between;
 
-      border: solid red;
-
       &__views {
-        border: solid green;
+        @include flex-row;
+
+        margin: 1rem 0;
 
         h3 {
           margin: 0;
+          text-align: left;
         }
       }
 
       &__likes {
-        border: solid green;
+        @include flex-row;
+        margin: 1rem 0;
 
         h3 {
           margin: 0;
@@ -74,22 +83,29 @@
       }
     }
   }
-}
 
-.video-description__stats__views,
-.video-description__stats__likes {
-  display: flex;
-  align-items: center;
-  font-size: 0.8rem;
+  &__description-content {
+    text-align: left;
+  }
 }
 
 .commentForm-section {
+  padding: 2rem;
   min-height: 100vh;
-  padding-bottom: 5rem;
+
   @include flex-center-column;
 
+  border: solid blue;
+
+  &__no-of-comments {
+    width: 100%;
+    text-align: left;
+  }
+
   &__title-container {
-    width: 80%;
+    width: 57%;
+    // border: solid red;
+    text-align: left;
   }
 
   &__form-section {

@@ -1,16 +1,21 @@
 import AddIcon from "../Icons/AddIcon";
+import userLogo from "../../assets/images/Mohan-muruge.jpg";
 
 const Comments = ({ comments }) => {
   return (
     <section className="commentForm-section">
-      <h1 className="commentForm-section__title-container">
-        Join the Conversations
-      </h1>
+      <h3 className="commentForm-section__no-of-comments">
+        {comments.length} Comments
+      </h3>
+      <h3 className="h3-light-gray  commentForm-section__title-container">
+        JOIN THE CONVERSATION
+      </h3>
       <div className="commentForm-section__form-section">
         <div className="commentForm-section__form-section--img-container">
           <img
             className="commentForm-section__form-section--img-container--img"
-            src="./assets/Images/Mohan-muruge.jpg"
+            src={userLogo}
+            alt="User Logo"
           />
         </div>
         <div className="commentForm-section__form-section--form-container">
