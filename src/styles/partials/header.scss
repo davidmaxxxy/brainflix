@@ -96,6 +96,7 @@
     @include flex-center-column;
     width: 90%;
     margin: 0.5rem 0;
+    font-size: $mobile-section-header-text-size;
 
     @include media($tablet-breakpoint) {
       @include flex-center-column;

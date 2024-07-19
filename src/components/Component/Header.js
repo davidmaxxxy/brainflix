@@ -1,4 +1,5 @@
 import Uploader from "./Uploader";
+import { Link } from "react-router-dom";
 import userLogo from "../../assets/images/Mohan-muruge.jpg";
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import SearchIcon from "../Icons/SearchIcon";
@@ -6,13 +7,13 @@ import SearchIcon from "../Icons/SearchIcon";
 const Header = () => {
   return (
     <header className="header">
-      <div className="header__logo">
+      <Link to="/" className="header__logo">
         <img
           className="header__logo--brainflix-logo"
           src={logo}
           alt="BrainFlix Logo"
         />
-      </div>
+      </Link>
       <div className="header__search-container">
         <div className="header__search-container--search-bar-wrapper">
           <SearchIcon />
@@ -29,7 +30,9 @@ const Header = () => {
         className="header__search-container--user-logo"
       />
       <div className="header__uploader">
-        <Uploader />
+        <Link to="/upload">
+          <Uploader />
+        </Link>
       </div>
     </header>
   );
