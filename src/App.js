@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import logo from "./assets/images/BrainFlix-logo.svg";
 import "./styles/partials/header.css";
 import "./styles/partials/styles.css";
+import UploadPage from "./pages/Page/UploadPage";
 import VideoDescription from "./components/Component/VideoDescription";
 import Comments from "./components/Component/Comments";
 import NextVideos from "./components/Component/NextVideo";
@@ -11,6 +12,7 @@ import Video from "./components/Component/Video";
 import videoDetails from "./data/video-details.json";
 import videosJSON from "./data/videos.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import axios from "axios";
 
 console.log(videoDetails[0]);
 console.log(videosJSON[0]);
