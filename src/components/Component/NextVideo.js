@@ -1,4 +1,13 @@
+import { useNavigate, useParams } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+
 const NextVideos = ({ videos, mainVidoeId, handleNextVideo }) => {
+  const navigate = useNavigate();
+
+  const handleClick = (videoId) => {
+    handleNextVideo(videoId);
+    navigate(`/video/${videoId}`);
+  };
   const filteredVideosArray = videos.filter(
     (video) => video.id !== mainVidoeId
   );
@@ -11,7 +20,7 @@ const NextVideos = ({ videos, mainVidoeId, handleNextVideo }) => {
       <div className="next-videos__list">
         {filteredVideosArray.map((video) => (
           <div
-            onClick={() => handleNextVideo(video.id)}
+            onClick={() => handleClick(video.id)}
             key={video.id}
             className="next-videos__video-container"
           >
