@@ -1,26 +1,40 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UploadPage from "./pages/Page/UploadPage";
-import VideoDescription from "./components/Component/VideoDescription";
-import Comments from "./components/Component/Comments";
-import NextVideos from "./components/Component/NextVideo";
-import Header from "./components/Component/Header";
-import Video from "./components/Component/Video";
 import VideoDetails from "./pages/Page/VideoDetails";
-import videoDetails from "./data/video-details.json";
-import videosJSON from "./data/videos.json";
+import Header from "./components/Component/Header";
+import axios from "axios";
+
 import "./App.css";
 import "./styles/partials/header.css";
 import "./styles/partials/styles.css";
 
 function App() {
-  const [mainVideo, setMainVideo] = useState(videoDetails[0]);
-  const [videos, setVideos] = useState(videosJSON);
+  const [mainVideo, setMainVideo] = useState(null);
+  const [videos, setVideos] = useState([]);
 
-  const handleNextVideo = (videoId) => {
-    const filteredVideo = videoDetails.filter((video) => video.id === videoId);
-    setMainVideo(filteredVideo[0]);
-  };
+  const apiKey = `2f32f7c6-dec0-4006-91ea-4e376c724905`;
+  const apiURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${apiKey}`;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const videosResponse = await axios.get(apiURL);
+        const data = videosResponse.data;
+        setVideos(data);
+        if (data.length > 0) {
+          const mainVideoResponse = await axios.get(
+            `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${data[0].id}?api_key=${apiKey}`
+          );
+          setMainVideo(mainVideoResponse.data);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [apiURL]);
 
   return (
     <Router>
@@ -30,23 +44,11 @@ function App() {
           <Route path="/upload" element={<UploadPage />} />
           <Route
             path="/"
-            element={
-              <VideoDetails
-                mainVideo={mainVideo}
-                videos={videos}
-                handleNextVideo={handleNextVideo}
-              />
-            }
+            element={<VideoDetails mainVideo={mainVideo} videos={videos} />}
           />
           <Route
             path="/video/:id"
-            element={
-              <VideoDetails
-                mainVideo={mainVideo}
-                videos={videos}
-                handleNextVideo={handleNextVideo}
-              />
-            }
+            element={<VideoDetails mainVideo={mainVideo} videos={videos} />}
           />
           {/* Add Route for page not found */}
         </Routes>

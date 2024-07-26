@@ -1,13 +1,12 @@
-import { useNavigate, useParams } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const NextVideos = ({ videos, mainVidoeId, handleNextVideo }) => {
+const NextVideos = ({ videos, mainVidoeId }) => {
   const navigate = useNavigate();
 
   const handleClick = (videoId) => {
-    handleNextVideo(videoId);
     navigate(`/video/${videoId}`);
   };
+
   const filteredVideosArray = videos.filter(
     (video) => video.id !== mainVidoeId
   );
