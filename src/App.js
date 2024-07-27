@@ -4,7 +4,6 @@ import UploadPage from "./pages/Page/UploadPage";
 import VideoDetails from "./pages/Page/VideoDetails";
 import Header from "./components/Component/Header";
 import axios from "axios";
-
 import "./App.css";
 import "./styles/partials/header.css";
 import "./styles/partials/styles.css";

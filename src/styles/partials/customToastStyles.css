@@ -1,0 +1,136 @@
+@import "react-toastify/dist/ReactToastify.css";
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 32px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 44px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.h3-light-gray {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+  color: rgb(201, 197, 197);
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 22px;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+a {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 22px;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  a {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #ffffff;
+  }
+}
+a:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Avenir Next", sans-serif;
+}
+
+.Toastify__toast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.Toastify__toast {
+  background-color: #3795ff !important;
+  color: #ffffff !important;
+  pointer-events: all;
+}
+
+.Toastify__toast--success {
+  background-color: #3795ff !important;
+}
+
+.Toastify__close-button {
+  color: #ffffff !important;
+}
+
+.Toastify__progress-bar {
+  background-color: #9dcbff !important;
+}/*# sourceMappingURL=customToastStyles.css.map */

@@ -1,12 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "../../styles/partials/customToastStyles.css";
+import "../../styles/partials/customToastStyles.css";
 import "../Page/UploadPage.scss";
 
 const UploadPage = () => {
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    toast.success("Video uploaded successfully!");
+
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
+  };
+
   return (
     <>
       <section className="upload">
         <h1 className="upload__title">Upload Video</h1>
-        <div className="upload__form">
+        <form className="upload__form" onSubmit={handleSubmit}>
           <div className="upload__form-group">
             <h3 className="upload__form-label">VIDEO THUMBNAIL</h3>
             <div className="upload__form-thumbnail"></div>
@@ -27,14 +43,22 @@ const UploadPage = () => {
             ></textarea>
           </div>
           <div className="upload__form-actions">
-            <button className="upload__form-button upload__form-button--publish">
+            <button
+              type="submit"
+              className="upload__form-button upload__form-button--publish"
+            >
               Publish
             </button>
-            <button className="upload__form-button upload__form-button--cancel">
+            <button
+              type="button"
+              className="upload__form-button upload__form-button--cancel"
+              onClick={() => navigate("/")}
+            >
               Cancel
             </button>
           </div>
-        </div>
+        </form>
+        <ToastContainer />
       </section>
     </>
   );

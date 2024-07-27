@@ -1,0 +1,36 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./global" as *;
+
+@import "react-toastify/dist/ReactToastify.css";
+.Toastify__toast-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   top: 0;
+  width: 100%;
+  //   position: fixed;
+  z-index: 9999;
+  pointer-events: none; // Prevent the container from intercepting clicks
+}
+
+.Toastify__toast {
+  background-color: $primary-color-blue !important; // Use your variable for blue background
+  color: #ffffff !important; // White text
+  pointer-events: all; // Allow interaction with the toast
+}
+
+.Toastify__toast--success {
+  background-color: $primary-color-blue !important; // Use your variable for blue background
+}
+
+.Toastify__close-button {
+  color: #ffffff !important; // White close button
+}
+
+.Toastify__progress-bar {
+  background-color: lighten(
+    $primary-color-blue,
+    20%
+  ) !important; // Lighter blue progress bar
+}
