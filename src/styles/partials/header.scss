@@ -8,10 +8,12 @@
 
   @include media($tablet-breakpoint) {
     justify-content: space-between;
+    border-bottom: solid $primary-color-silver 2px;
   }
 
   @include media($desktop-breakpoint) {
     padding: 1rem 5rem;
+    border-bottom: solid $primary-color-silver 2px;
   }
 
   &__logo {
@@ -39,7 +41,7 @@
     @include flex-row;
     align-items: center;
     padding: 1rem;
-    width: 65%;
+    width: 80%;
 
     @include media($tablet-breakpoint) {
       @include flex-center-column;
@@ -109,6 +111,10 @@
       width: 10rem;
     }
 
+    a {
+      width: 80%;
+    }
+
     &__button {
       @include flex-center-row;
       width: 100%;
@@ -121,11 +127,13 @@
       cursor: pointer;
 
       @include media($tablet-breakpoint) {
-        width: 9rem;
+        width: auto;
+        padding: 0 1.5rem;
       }
 
       @include media($desktop-breakpoint) {
-        width: 10rem;
+        width: auto;
+        padding: 0 1.5rem;
       }
 
       &--text {

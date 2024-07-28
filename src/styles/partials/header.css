@@ -9,11 +9,13 @@
 @media (min-width: 768px) {
   .header {
     justify-content: space-between;
+    border-bottom: solid rgb(201, 197, 197) 2px;
   }
 }
 @media (min-width: 1025px) {
   .header {
     padding: 1rem 5rem;
+    border-bottom: solid rgb(201, 197, 197) 2px;
   }
 }
 .header__logo {
@@ -44,7 +46,7 @@
   flex-direction: row;
   align-items: center;
   padding: 1rem;
-  width: 65%;
+  width: 80%;
 }
 @media (min-width: 768px) {
   .header__search-container {
@@ -130,6 +132,9 @@
     width: 10rem;
   }
 }
+.header__uploader a {
+  width: 80%;
+}
 .header__uploader__button {
   display: flex;
   align-items: center;
@@ -146,12 +151,14 @@
 }
 @media (min-width: 768px) {
   .header__uploader__button {
-    width: 9rem;
+    width: auto;
+    padding: 0 1.5rem;
   }
 }
 @media (min-width: 1025px) {
   .header__uploader__button {
-    width: 10rem;
+    width: auto;
+    padding: 0 1.5rem;
   }
 }
 .header__uploader__button--text {
