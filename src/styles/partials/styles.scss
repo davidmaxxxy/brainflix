@@ -372,7 +372,7 @@
   padding: 2rem;
 
   @include media($desktop-breakpoint) {
-    padding: 0;
+    padding: 0 2rem;
   }
 
   &__list {

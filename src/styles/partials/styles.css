@@ -519,7 +519,7 @@ body {
 }
 @media (min-width: 1025px) {
   .next-videos {
-    padding: 0;
+    padding: 0 2rem;
   }
 }
 .next-videos__list {
