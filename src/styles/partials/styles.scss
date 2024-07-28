@@ -259,7 +259,7 @@
 
           @include media($tablet-breakpoint) {
             height: 3rem;
-            width: 30%;
+            width: 35%;
             margin-bottom: 0;
           }
 
@@ -276,7 +276,7 @@
           }
 
           &:hover {
-            background-color: darken($primary-color-black, 10%);
+            background-color: darken($primary-color-blue, 10%);
           }
         }
       }

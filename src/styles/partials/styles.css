@@ -409,7 +409,7 @@ body {
 @media (min-width: 768px) {
   .commentForm-section__form-section--form-container--form button[type=submit] {
     height: 3rem;
-    width: 30%;
+    width: 35%;
     margin-bottom: 0;
   }
 }
@@ -424,7 +424,7 @@ body {
   font-weight: 700;
 }
 .commentForm-section__form-section--form-container--form button[type=submit]:hover {
-  background-color: #191919;
+  background-color: #047aff;
 }
 .commentForm-section__form-section--img-container {
   height: 4rem;
