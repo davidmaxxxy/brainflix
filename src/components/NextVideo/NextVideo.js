@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "../NextVideo/next-video.scss";
 
 const NextVideos = ({ videos, mainVidoeId }) => {
   const navigate = useNavigate();

@@ -1,5 +1,6 @@
 import AddIcon from "../Icons/AddIcon";
 import userLogo from "../../assets/images/Mohan-muruge.jpg";
+import "../Comments/comments.scss";
 
 const Comments = ({ comments }) => {
   return (

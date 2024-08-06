@@ -1,5 +1,6 @@
-@use "./mixins" as *;
-@use "./variables" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .header {
   @include flex-center-row;
@@ -92,64 +93,6 @@
         margin-left: 1rem;
 
         order: 4;
-      }
-    }
-  }
-
-  &__uploader {
-    @include flex-center-column;
-    width: 90%;
-    margin: 0.5rem 0;
-    font-size: $mobile-section-header-text-size;
-
-    @include media($tablet-breakpoint) {
-      @include flex-center-column;
-      width: 20%;
-
-      margin: 0;
-      order: 3;
-    }
-
-    @include media($desktop-breakpoint) {
-      width: 15%;
-    }
-
-    a {
-      width: 100%;
-
-      @include media($tablet-breakpoint) {
-        width: 100%;
-      }
-
-      @include media($desktop-breakpoint) {
-        width: 100%;
-      }
-    }
-
-    &__button {
-      @include flex-center-row;
-      width: 100%;
-      background-color: $primary-color-blue;
-      color: $primary-color-white;
-      border: none;
-      border-radius: 5px;
-      font-size: $mobile-subheader-text-size;
-      font-weight: $mobile-subheader-text-weight;
-      cursor: pointer;
-
-      @include media($tablet-breakpoint) {
-        width: 100%;
-        padding: 0 0.5rem;
-      }
-
-      @include media($desktop-breakpoint) {
-        width: 100%;
-        padding: 0 0.7rem;
-      }
-
-      &--text {
-        width: 80%;
-        font-weight: 700;
       }
     }
   }

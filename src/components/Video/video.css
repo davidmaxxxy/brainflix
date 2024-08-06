@@ -105,4 +105,24 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Avenir Next", sans-serif;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+.video__player {
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+@media (min-width: 1025px) {
+  .video__player {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=video.css.map */

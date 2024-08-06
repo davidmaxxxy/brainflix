@@ -1,11 +1,11 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UploadPage from "./pages/Page/UploadPage";
-import VideoDetails from "./pages/Page/VideoDetails";
-import Header from "./components/Component/Header";
+import VideoDetails from "./components/VideoDetails/VideoDetails.js";
+import Header from "./components/Header/Header.js";
 import axios from "axios";
 import "./App.css";
-import "./styles/partials/header.css";
+import "./components/Header/header.css";
 import "./styles/partials/styles.css";
 
 function App() {

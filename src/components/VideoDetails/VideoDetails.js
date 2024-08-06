@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import VideoDescription from "../../components/Component/VideoDescription";
-import Comments from "../../components/Component/Comments";
-import NextVideos from "../../components/Component/NextVideo";
-import Video from "../../components/Component/Video";
+import VideoDescription from "../VideoDescription/VideoDescription";
+import Comments from "../Comments/Comments";
+import NextVideos from "../NextVideo/NextVideo";
+import Video from "../Video/Video";
 import axios from "axios";
 import "../../styles/partials/styles.scss";
 

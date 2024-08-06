@@ -105,4 +105,69 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Avenir Next", sans-serif;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.next-videos {
+  margin-bottom: 0.5rem;
+  padding: 2rem;
+}
+@media (min-width: 1025px) {
+  .next-videos {
+    padding: 0 2rem;
+  }
+}
+.next-videos__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.next-videos__title {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.next-videos__video-container {
+  display: flex;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.next-videos__video-container--video-img {
+  width: 40%;
+  margin-right: 2rem;
+}
+@media (min-width: 768px) {
+  .next-videos__video-container--video-img {
+    margin-right: 1rem;
+  }
+}
+.next-videos__video-container--video-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+.next-videos__video-container--video-desc-bold {
+  text-align: left;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+.next-videos__video-container--video-desc-standard {
+  text-align: left;
+  font-weight: 400;
+  margin: 0;
+}
+.next-videos__video-container--video-img img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}/*# sourceMappingURL=next-video.css.map */

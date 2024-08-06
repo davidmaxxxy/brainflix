@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/partials/styles.css";
+import "../VideoDescription/video-description.scss";
 import ViewIcon from "../Icons/ViewIcon";
 import HeartIcon from "../Icons/HeartIcon";
 

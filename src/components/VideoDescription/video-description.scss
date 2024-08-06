@@ -1,0 +1,98 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-description {
+  padding: 2rem;
+
+  @include media($tablet-breakpoint) {
+    padding: 1rem 5rem;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    border-bottom: solid $primary-color-silver;
+    @include flex-column;
+
+    h1 {
+      text-align: left;
+    }
+  }
+
+  &__details {
+    @include flex-center-row;
+
+    &--container {
+      @include flex-column;
+      width: 50%;
+
+      @include media($desktop-breakpoint) {
+        @include flex-row;
+      }
+    }
+
+    &--creator {
+      margin: 1rem 0;
+
+      h3 {
+        margin: 0;
+        text-align: left;
+        font-weight: 700;
+        font-size: $wide-screen-subheader-text-size;
+      }
+
+      @include media($tablet-breakpoint) {
+        margin-right: 1rem;
+      }
+    }
+    &--date {
+      font-weight: bold;
+      margin: 1rem 0;
+
+      h3 {
+        margin: 0;
+        text-align: left;
+      }
+    }
+
+    &--stats {
+      @include flex-column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      @include media($tablet-breakpoint) {
+        @include flex-row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-right: 1rem;
+      }
+
+      &__views {
+        @include flex-row;
+        margin: 1rem 0;
+
+        @include media($tablet-breakpoint) {
+          margin-right: 1rem;
+        }
+
+        h3 {
+          margin: 0;
+          text-align: left;
+        }
+      }
+
+      &__likes {
+        @include flex-row;
+        margin: 1rem 0;
+
+        h3 {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__description-content {
+    text-align: left;
+  }
+}

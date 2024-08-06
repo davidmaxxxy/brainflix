@@ -1,3 +1,5 @@
+import "../Video/video.scss";
+
 const Video = ({ image }) => {
   return (
     <section className="video">

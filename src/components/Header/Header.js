@@ -1,4 +1,4 @@
-import Uploader from "./Uploader";
+import Uploader from "../Uploader/Uploader.js";
 import { Link } from "react-router-dom";
 import userLogo from "../../assets/images/Mohan-muruge.jpg";
 import logo from "../../assets/images/BrainFlix-logo.svg";

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import UploadIcon from "../Icons/UploadIcon";
+import "../Uploader/uploader.scss";
 
 const Uploader = () => {
   return (

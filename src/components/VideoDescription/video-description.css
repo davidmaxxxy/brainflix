@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 32px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 44px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.h3-light-gray {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 22px;
+  font-family: "Avenir Next", sans-serif;
+  color: rgb(201, 197, 197);
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 22px;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+a {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
+  line-height: 22px;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  a {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #ffffff;
+  }
+}
+a:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Avenir Next", sans-serif;
+}
+
+.video-description {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .video-description {
+    padding: 1rem 5rem;
+  }
+}
+.video-description__title {
+  margin-bottom: 0.5rem;
+  border-bottom: solid rgb(201, 197, 197);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.video-description__title h1 {
+  text-align: left;
+}
+.video-description__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.video-description__details--container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+@media (min-width: 1025px) {
+  .video-description__details--container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+.video-description__details--creator {
+  margin: 1rem 0;
+}
+.video-description__details--creator h3 {
+  margin: 0;
+  text-align: left;
+  font-weight: 700;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .video-description__details--creator {
+    margin-right: 1rem;
+  }
+}
+.video-description__details--date {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.video-description__details--date h3 {
+  margin: 0;
+  text-align: left;
+}
+.video-description__details--stats {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (min-width: 768px) {
+  .video-description__details--stats {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+}
+.video-description__details--stats__views {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+@media (min-width: 768px) {
+  .video-description__details--stats__views {
+    margin-right: 1rem;
+  }
+}
+.video-description__details--stats__views h3 {
+  margin: 0;
+  text-align: left;
+}
+.video-description__details--stats__likes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+.video-description__details--stats__likes h3 {
+  margin: 0;
+}
+.video-description__description-content {
+  text-align: left;
+}/*# sourceMappingURL=video-description.css.map */

@@ -105,4 +105,73 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Avenir Next", sans-serif;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.header__uploader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  margin: 0.5rem 0;
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  .header__uploader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    margin: 0;
+    order: 3;
+  }
+}
+@media (min-width: 1025px) {
+  .header__uploader {
+    width: 15%;
+  }
+}
+.header__uploader a {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .header__uploader a {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .header__uploader a {
+    width: 100%;
+  }
+}
+.header__uploader__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #3795ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .header__uploader__button {
+    width: 100%;
+    padding: 0 0.5rem;
+  }
+}
+@media (min-width: 1025px) {
+  .header__uploader__button {
+    width: 100%;
+    padding: 0 0.7rem;
+  }
+}
+.header__uploader__button--text {
+  width: 80%;
+  font-weight: 700;
+}/*# sourceMappingURL=Uploader.css.map */

@@ -1,0 +1,222 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.commentForm-section {
+  padding: 2rem;
+  @include flex-center-column;
+
+  @include media($tablet-breakpoint) {
+    padding: 1rem 5rem;
+  }
+
+  &__no-of-comments {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+
+    @include media($tablet-breakpoint) {
+      font-weight: 700;
+    }
+  }
+
+  &__title-container {
+    width: 70%;
+    margin-top: 3rem;
+    text-align: left;
+
+    @include media($desktop-breakpoint) {
+      width: 75%;
+      margin: 2rem 0 0.5rem 0;
+      // border: solid red;
+    }
+  }
+
+  &__form-section {
+    width: 100%;
+    @include flex-center-row;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    border-bottom: solid $primary-color-silver;
+
+    @include media($tablet-breakpoint) {
+      @include flex-center-row;
+    }
+
+    &--form-container {
+      @include flex-center-row;
+      align-items: flex-start;
+      width: 100%;
+
+      @include media($desktop-breakpoint) {
+        @include flex-center-row;
+        width: 100%;
+      }
+
+      &--form {
+        @include flex-center-column;
+        align-items: flex-start;
+        background-color: white;
+        width: 100%;
+        margin-left: 2rem;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        @include media($tablet-breakpoint) {
+          @include flex-center-row;
+        }
+
+        label {
+          font-size: 14px;
+          margin-bottom: 0.5rem;
+        }
+
+        input[type="text"],
+        textarea {
+          width: 100%;
+          height: 12rem;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid $primary-color-silver;
+          border-radius: 4px;
+          font-family: "Avenir Next";
+          font-size: $mobile-body-text-size;
+          line-height: $mobile-body-line-height;
+          font-weight: $mobile-body-text-weight;
+          color: $primary-color-black;
+          box-sizing: border-box;
+          resize: none;
+
+          @include media($tablet-breakpoint) {
+            height: 3rem;
+            width: 60%;
+            margin-bottom: 0;
+            margin-right: 2rem;
+          }
+
+          &:nth-child(4) {
+            height: 200px;
+          }
+        }
+
+        button[type="submit"] {
+          @include flex-center-row;
+          width: 100%;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 4px;
+          background-color: $primary-color-blue;
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          margin-bottom: 2rem;
+
+          @include media($tablet-breakpoint) {
+            height: 3rem;
+            width: 35%;
+            margin-bottom: 0;
+          }
+
+          svg {
+            margin-left: 0.5rem;
+            width: 20px;
+            height: 20px;
+            fill: white;
+          }
+
+          h3 {
+            width: 80%;
+            font-weight: 700;
+          }
+
+          &:hover {
+            background-color: darken($primary-color-blue, 10%);
+          }
+        }
+      }
+    }
+
+    &--img-container {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+
+      overflow: hidden;
+      margin-top: 0.5rem;
+
+      &--img {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__comments-section {
+    @include flex-center-column;
+    width: 100%;
+  }
+
+  &__comments-container {
+    @include flex-row;
+    padding: 1rem 0;
+    border-bottom: solid $primary-color-silver;
+    width: 100%;
+
+    &--img-container {
+      @include flex-column;
+
+      &--img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 0.5rem;
+        background-color: $primary-color-silver;
+      }
+    }
+
+    &--content-container {
+      @include flex-center-column;
+      width: 100%;
+      margin-left: 1rem;
+
+      p {
+        text-align: left;
+      }
+    }
+
+    &--title-container {
+      width: 90%;
+      @include flex-center-row;
+      justify-content: space-between;
+
+      p {
+        font-weight: 700;
+
+        &:nth-child(2) {
+          color: $primary-color-silver;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &--content {
+      width: 90%;
+      color: $primary-color-black;
+      box-sizing: border-box;
+    }
+  }
+
+  &__like-delete-container {
+    width: 100%;
+
+    @include flex-center-row;
+    justify-content: flex-start;
+
+    &--like-container {
+      width: 20%;
+    }
+  }
+}
