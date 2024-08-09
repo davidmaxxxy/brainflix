@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import UploadPage from "./pages/Page/UploadPage";
+import UploadPage from "./pages/UploadPage/UploadPage.js";
 import VideoDetails from "./components/VideoDetails/VideoDetails.js";
 import Header from "./components/Header/Header.js";
 import axios from "axios";

@@ -1,23 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "../../styles/partials/customToastStyles.css";
-import "../../styles/partials/customToastStyles.css";
-import "../Page/UploadPage.scss";
-import UploadIcon from "../../components/Icons/UploadIcon";
+import "../../styles/toast-styles/customToastStyles.css";
+import "./UploadPage.scss";
+import UploadIcon from "../../assets/Icons/UploadIcon";
 import thumbnailImage from "../../assets/images/Upload-video-preview.jpg";
+
+const apiUrl = "http://localhost:8080/videos";
 
 const UploadPage = () => {
   const navigate = useNavigate();
-  const handleSubmit = (event) => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleTitleChange = (e) => setTitle(e.target.value);
+  const handleDescriptionChange = (e) => setDescription(e.target.value);
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    toast.success("Video uploaded successfully!");
+    const newVideo = {
+      id: uuidv4(),
+      title: title,
+      description: description,
+      channel: "New Channel",
+      image: "/path/to/default/image.jpg",
+      views: "0",
+      likes: "0",
+      duration: "0:00",
+      video: "/path/to/video.mp4",
+      timestamp: Date.now(),
+      comments: [],
+    };
 
-    setTimeout(() => {
-      navigate("/");
-    }, 3000);
+    try {
+      await axios.post(apiUrl, newVideo);
+      toast.success("Video uploaded successfully!");
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+    } catch (error) {
+      console.error("Error uploading video", error);
+      toast.error("Failed to upload video");
+    }
   };
 
   return (
@@ -48,6 +76,8 @@ const UploadPage = () => {
                     type="text"
                     className="upload__form-input"
                     placeholder="Add a title to your video"
+                    value={title}
+                    onChange={handleTitleChange}
                   />
                 </div>
                 <div className="upload__form-group h3-light-gray">
@@ -57,6 +87,8 @@ const UploadPage = () => {
                   <textarea
                     className="upload__form-textarea"
                     placeholder="Add a video description to your video"
+                    value={description}
+                    onChange={handleDescriptionChange}
                   ></textarea>
                 </div>
               </div>

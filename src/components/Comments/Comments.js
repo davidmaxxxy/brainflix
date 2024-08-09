@@ -1,4 +1,4 @@
-import AddIcon from "../Icons/AddIcon";
+import AddIcon from "../../assets/Icons/AddIcon";
 import userLogo from "../../assets/images/Mohan-muruge.jpg";
 import "../Comments/comments.scss";
 

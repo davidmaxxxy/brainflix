@@ -1,4 +1,4 @@
-import "../Icons/icons.css";
+import "./icons.css";
 
 const UploadIcon = () => {
   return (

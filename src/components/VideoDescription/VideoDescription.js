@@ -1,7 +1,7 @@
 import React from "react";
 import "../VideoDescription/video-description.scss";
-import ViewIcon from "../Icons/ViewIcon";
-import HeartIcon from "../Icons/HeartIcon";
+import ViewIcon from "../../assets/Icons/ViewIcon";
+import HeartIcon from "../../assets/Icons/HeartIcon";
 
 const VideoDescription = ({
   channel,

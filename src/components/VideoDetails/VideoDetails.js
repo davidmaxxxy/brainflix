@@ -5,7 +5,7 @@ import Comments from "../Comments/Comments";
 import NextVideos from "../NextVideo/NextVideo";
 import Video from "../Video/Video";
 import axios from "axios";
-import "../../styles/partials/styles.scss";
+import "../VideoDetails/video-details.scss";
 
 const VideoDetails = ({ mainVideo, videos }) => {
   const { id } = useParams();

@@ -7,12 +7,12 @@
   flex-direction: column;
 
   @include media($desktop-breakpoint) {
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: row; // This should ensure the left and right sections are side by side
+    align-items: flex-start; // This aligns items to the top
   }
 
   &__left {
-    flex: 1;
+    flex: 1; // Take up available space
     padding: 0rem;
 
     @include media($desktop-breakpoint) {
@@ -26,9 +26,9 @@
     padding: 0rem;
 
     @include media($desktop-breakpoint) {
-      width: 30%;
+      width: 30%; // Width for the right section
       border-left: solid $primary-color-silver;
-      padding: 0;
+      padding: 0 1rem; // Spacing within the right section
     }
   }
 }

@@ -135,6 +135,6 @@ body {
   .main-content__right {
     width: 30%;
     border-left: solid rgb(201, 197, 197);
-    padding: 0;
+    padding: 0 1rem;
   }
 }/*# sourceMappingURL=video-details.css.map */
