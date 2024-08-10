@@ -7,7 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "../../styles/toast-styles/customToastStyles.css";
 import "./UploadPage.scss";
 import UploadIcon from "../../assets/Icons/UploadIcon";
-import thumbnailImage from "../../assets/images/Upload-video-preview.jpg";
+
+const thumbnailImageUrl = `http://localhost:8080/images/upload-image-thumbnail.jpg`;
 
 const apiUrl = "http://localhost:8080/videos";
 
@@ -27,7 +28,7 @@ const UploadPage = () => {
       title: title,
       description: description,
       channel: "New Channel",
-      image: "/path/to/default/image.jpg",
+      image: thumbnailImageUrl,
       views: "0",
       likes: "0",
       duration: "0:00",
@@ -61,7 +62,7 @@ const UploadPage = () => {
                 </h3>
                 <div className="upload__form-thumbnail">
                   <img
-                    src={thumbnailImage}
+                    src={thumbnailImageUrl}
                     alt="Video Thumbnail"
                     className="upload__form-thumbnail-image"
                   />
