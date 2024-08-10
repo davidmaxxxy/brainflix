@@ -12,8 +12,7 @@ function App() {
   const [mainVideo, setMainVideo] = useState(null);
   const [videos, setVideos] = useState([]);
 
-  const apiKey = `2f32f7c6-dec0-4006-91ea-4e376c724905`;
-  const apiURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${apiKey}`;
+  const apiURL = `http://localhost:8080/videos`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +22,7 @@ function App() {
         setVideos(data);
         if (data.length > 0) {
           const mainVideoResponse = await axios.get(
-            `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${data[0].id}?api_key=${apiKey}`
+           `${apiURL}/${data[0].id}`
           );
           setMainVideo(mainVideoResponse.data);
         }

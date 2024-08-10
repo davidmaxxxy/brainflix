@@ -10,7 +10,6 @@ const Video = ({ image }) => {
         poster={image}
         className="video__player"
       >
-        {/* Add video source(s) here when functionality is implemented */}
         <source src="your-video.mp4" type="video/mp4" />
       </video>
     </section>

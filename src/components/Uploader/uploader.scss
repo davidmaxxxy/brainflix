@@ -22,6 +22,9 @@
 
   a {
     width: 100%;
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @include media($tablet-breakpoint) {
       width: 100%;
@@ -42,6 +45,7 @@
     font-size: $mobile-subheader-text-size;
     font-weight: $mobile-subheader-text-weight;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 
     @include media($tablet-breakpoint) {
       width: 100%;
@@ -51,6 +55,10 @@
     @include media($desktop-breakpoint) {
       width: 100%;
       padding: 0 0.7rem;
+    }
+
+    &:hover {
+      transform: scale(1.05);
     }
 
     &--text {

@@ -7,30 +7,40 @@ import Video from "../Video/Video";
 import axios from "axios";
 import "../VideoDetails/video-details.scss";
 
-const VideoDetails = ({ mainVideo, videos }) => {
+const VideoDetails = ({ mainVideo }) => {
   const { id } = useParams();
   const [currentVideo, setCurrentVideo] = useState(mainVideo);
+  const [videos, setVideos] = useState([]);
 
-  const apiKey = `2f32f7c6-dec0-4006-91ea-4e376c724905`;
+  const apiUrl = `http://localhost:8080/videos`;
 
   useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const response = await axios.get(apiUrl);
+        setVideos(response.data);
+      } catch (error) {
+        console.error(`Error fetching video details:`, error);
+      }
+    };
+
     const fetchVideoDetails = async (videoId) => {
       try {
-        const response = await axios.get(
-          `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId}?api_key=${apiKey}`
-        );
+        const response = await axios.get(`${apiUrl}/${videoId}`);
         setCurrentVideo(response.data);
       } catch (error) {
         console.error(`Error fetching video details:`, error);
       }
     };
+    
+    fetchVideos();
 
     if (id) {
       fetchVideoDetails(id);
     } else {
       setCurrentVideo(mainVideo);
     }
-  }, [id, mainVideo]);
+  }, [id, mainVideo, apiUrl]);
 
   if (!currentVideo) {
     return <div>Video not found</div>;
