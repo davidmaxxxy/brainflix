@@ -119,12 +119,11 @@ body {
 }
 .main-content__left {
   flex: 1;
-  padding: 0rem;
 }
 @media (min-width: 1025px) {
   .main-content__left {
     flex: 1;
-    padding: 1rem;
+    padding-left: 5rem;
   }
 }
 .main-content__right {
@@ -133,8 +132,7 @@ body {
 }
 @media (min-width: 1025px) {
   .main-content__right {
-    width: 30%;
+    width: 35%;
     border-left: solid rgb(201, 197, 197);
-    padding: 0 1rem;
   }
 }/*# sourceMappingURL=video-details.css.map */

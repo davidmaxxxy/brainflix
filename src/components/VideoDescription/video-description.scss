@@ -9,6 +9,10 @@
     padding: 1rem 5rem;
   }
 
+  @include media($desktop-breakpoint) {
+    padding: 1rem 3rem;
+  }
+
   &__title {
     margin-bottom: 0.5rem;
     border-bottom: solid $primary-color-silver;
@@ -21,6 +25,10 @@
 
   &__details {
     @include flex-center-row;
+
+    @include media($desktop-breakpoint) {
+      @include flex-row;
+    }
 
     &--container {
       @include flex-column;
@@ -44,10 +52,18 @@
       @include media($tablet-breakpoint) {
         margin-right: 1rem;
       }
+
+      @include media($desktop-breakpoint) {
+        margin-right: 0.7rem;
+      }
     }
     &--date {
       font-weight: bold;
       margin: 1rem 0;
+
+      @include media($desktop-breakpoint) {
+        margin-right: 1rem;
+      }
 
       h3 {
         margin: 0;

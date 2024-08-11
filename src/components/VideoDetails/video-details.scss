@@ -12,12 +12,11 @@
   }
 
   &__left {
-    flex: 1; // Take up available space
-    padding: 0rem;
+    flex: 1;
 
     @include media($desktop-breakpoint) {
       flex: 1;
-      padding: 1rem;
+      padding-left: 5rem;
     }
   }
 
@@ -26,9 +25,8 @@
     padding: 0rem;
 
     @include media($desktop-breakpoint) {
-      width: 30%; // Width for the right section
+      width: 35%;
       border-left: solid $primary-color-silver;
-      padding: 0 1rem; // Spacing within the right section
     }
   }
 }

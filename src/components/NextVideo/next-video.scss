@@ -29,10 +29,13 @@
     display: flex;
     padding: 0.5rem;
     cursor: pointer;
+    width: 100%;
 
     &--video-img {
-      width: 40%;
+      width: 160px;
+      aspect-ratio: 16/9;
       margin-right: 2rem;
+      overflow: hidden;
 
       @include media($tablet-breakpoint) {
         margin-right: 1rem;
@@ -45,6 +48,7 @@
       justify-content: flex-start;
       flex: 1;
     }
+
     &--video-desc-bold {
       text-align: left;
       font-weight: 700;
@@ -59,7 +63,7 @@
 
     &--video-img img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
       border-radius: 1rem;
     }

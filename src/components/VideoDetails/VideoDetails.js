@@ -32,7 +32,7 @@ const VideoDetails = ({ mainVideo }) => {
         console.error(`Error fetching video details:`, error);
       }
     };
-    
+
     fetchVideos();
 
     if (id) {
@@ -47,6 +47,9 @@ const VideoDetails = ({ mainVideo }) => {
   }
 
   const filteredVideos = videos.filter((video) => video.id !== currentVideo.id);
+
+  console.log("Current Video:", currentVideo);
+  console.log("Filtered Videos:", filteredVideos);
 
   return (
     <div className="video-details-page">

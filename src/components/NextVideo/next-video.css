@@ -135,10 +135,13 @@ body {
   display: flex;
   padding: 0.5rem;
   cursor: pointer;
+  width: 100%;
 }
 .next-videos__video-container--video-img {
-  width: 40%;
+  width: 160px;
+  aspect-ratio: 16/9;
   margin-right: 2rem;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .next-videos__video-container--video-img {
@@ -166,7 +169,7 @@ body {
 }
 .next-videos__video-container--video-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1rem;

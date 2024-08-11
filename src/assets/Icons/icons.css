@@ -124,14 +124,14 @@ body {
 .view-icon {
   width: 24px;
   height: 24px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   fill: rgb(201, 197, 197);
 }
 
 .heart-icon {
   width: 24px;
   height: 24px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   fill: rgb(201, 197, 197);
 }
 
