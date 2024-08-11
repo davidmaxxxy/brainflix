@@ -1,8 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import UploadPage from "./pages/UploadPage/UploadPage.js";
-import VideoDetails from "./components/VideoDetails/VideoDetails.js";
-import Header from "./components/Header/Header.js";
+import UploadPage from "./pages/UploadPage/UploadPage.jsx";
+import VideoDetails from "./components/VideoDetails/VideoDetails.jsx";
+import Header from "./components/Header/Header.jsx";
 import axios from "axios";
 import "./App.css";
 import "./components/Header/header.css";
@@ -21,9 +21,7 @@ function App() {
         const data = videosResponse.data;
         setVideos(data);
         if (data.length > 0) {
-          const mainVideoResponse = await axios.get(
-           `${apiURL}/${data[0].id}`
-          );
+          const mainVideoResponse = await axios.get(`${apiURL}/${data[0].id}`);
           setMainVideo(mainVideoResponse.data);
         }
       } catch (error) {

@@ -98,7 +98,7 @@ a {
 }
 a:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 body {
@@ -139,24 +139,33 @@ body {
 }
 @media (min-width: 1025px) {
   .video-description__details {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
   }
 }
-.video-description__details--container {
+.video-description__details--container-left {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   width: 50%;
 }
-@media (min-width: 1025px) {
-  .video-description__details--container {
+@media (min-width: 768px) {
+  .video-description__details--container-left {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1025px) {
+  .video-description__details--container-left {
+    display: flex;
+    align-items: center;
+    justify-content: start;
     flex-direction: row;
   }
 }
@@ -192,6 +201,29 @@ body {
   margin: 0;
   text-align: left;
 }
+.video-description__details--container-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .video-description__details--container-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1025px) {
+  .video-description__details--container-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+  }
+}
 .video-description__details--stats {
   display: flex;
   align-items: flex-start;
@@ -221,6 +253,10 @@ body {
 @media (min-width: 768px) {
   .video-description__details--stats__views {
     margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
   }
 }
 .video-description__details--stats__views h3 {
@@ -233,6 +269,15 @@ body {
   justify-content: flex-start;
   flex-direction: row;
   margin: 1rem 0;
+}
+@media (min-width: 768px) {
+  .video-description__details--stats__likes {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+  }
 }
 .video-description__details--stats__likes h3 {
   margin: 0;

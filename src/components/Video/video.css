@@ -98,7 +98,7 @@ a {
 }
 a:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 body {
@@ -108,17 +108,34 @@ body {
 }
 
 .video {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
-  overflow: hidden;
+  height: auto;
   background-color: black;
+  overflow: hidden;
+  position: relative;
 }
 .video__player {
   display: flex;
-  top: 0;
-  left: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
-  height: 50%;
+  max-height: 100%;
+  aspect-ratio: 16/9;
+}
+.video__player img,
+.video__player video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 1rem;
 }
 @media (min-width: 1025px) {
   .video__player {

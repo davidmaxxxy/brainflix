@@ -98,7 +98,7 @@ a {
 }
 a:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 body {
@@ -194,6 +194,7 @@ body {
 .header__search-container--search-bar-wrapper--search {
   padding: 0.5rem;
   border: none;
+  font-family: "Avenir Next", sans-serif;
   font-size: 20px;
   font-weight: 400;
   background-color: rgba(246, 243, 243, 0.55);

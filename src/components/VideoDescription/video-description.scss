@@ -27,15 +27,20 @@
     @include flex-center-row;
 
     @include media($desktop-breakpoint) {
+      width: 100%;
       @include flex-row;
     }
 
-    &--container {
+    &--container-left {
       @include flex-column;
       width: 50%;
 
-      @include media($desktop-breakpoint) {
+      @include media($tablet-breakpoint) {
         @include flex-row;
+      }
+
+      @include media($desktop-breakpoint) {
+        @include flex-start;
       }
     }
 
@@ -71,6 +76,19 @@
       }
     }
 
+    &--container-right {
+      @include flex-column;
+      width: 50%;
+
+      @include media($tablet-breakpoint) {
+        @include flex-end;
+      }
+
+      @include media($desktop-breakpoint) {
+        @include flex-end;
+      }
+    }
+
     &--stats {
       @include flex-column;
       justify-content: space-between;
@@ -89,6 +107,7 @@
 
         @include media($tablet-breakpoint) {
           margin-right: 1rem;
+          @include flex-end;
         }
 
         h3 {
@@ -100,6 +119,11 @@
       &__likes {
         @include flex-row;
         margin: 1rem 0;
+
+        @include media($tablet-breakpoint) {
+          margin-right: 1rem;
+          @include flex-end;
+        }
 
         h3 {
           margin: 0;

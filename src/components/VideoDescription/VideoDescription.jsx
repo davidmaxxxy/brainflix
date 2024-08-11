@@ -18,7 +18,7 @@ const VideoDescription = ({
         <h1>{title}</h1>
       </div>
       <div className="video-description__details">
-        <div className="video-description__details--container">
+        <div className="video-description__details--container-left">
           <div className="video-description__details--creator">
             {" "}
             <h3 className="h3-black-bold">By {channel}</h3>
@@ -34,7 +34,7 @@ const VideoDescription = ({
             </h3>
           </div>
         </div>
-        <div className="video-description__details--container">
+        <div className="video-description__details--container-right">
           <div className="video-description__details--stats">
             <div className="video-description__details--stats__views">
               <ViewIcon /> <h3 className="h3-light-gray">{views}</h3>

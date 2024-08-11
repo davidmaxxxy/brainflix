@@ -73,6 +73,7 @@
       &--search {
         padding: 0.5rem;
         border: none;
+        font-family: "Avenir Next", sans-serif;
         font-size: $mobile-subheader-text-size;
         font-weight: $mobile-subheader-text-weight;
         background-color: rgba(246, 243, 243, 0.55);
@@ -91,7 +92,6 @@
 
       @include media($tablet-breakpoint) {
         margin-left: 1rem;
-
         order: 4;
       }
     }
