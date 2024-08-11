@@ -7,8 +7,8 @@
   flex-direction: column;
 
   @include media($desktop-breakpoint) {
-    flex-direction: row; // This should ensure the left and right sections are side by side
-    align-items: flex-start; // This aligns items to the top
+    flex-direction: row; 
+    align-items: flex-start; 
   }
 
   &__left {
