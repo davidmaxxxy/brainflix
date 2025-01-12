@@ -1,71 +1,117 @@
-# Getting Started with Create React App
+# BrainFlix Sprint 3
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+BrainFlix is a video streaming platform that allows users to watch, upload, and interact with videos. In this Sprint, the goal was to build a **RESTful API** that handles the video data and to update the frontend to use this API instead of the previous mock API.
 
-In the project directory, you can run:
+### Key Features
 
-### `npm start`
+- **Video List**: Displays a list of all available videos.
+- **Video Detail**: Allows users to view the details of a specific video.
+- **Video Upload**: Users can upload a new video with a title, description, and an image (hardcoded URL).
+- **API Integration**: Replaced the mock API with a real API that stores video data in a JSON file for persistence.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Frontend Repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **GitHub Link (Frontend)**: [BrainFlix Frontend](https://github.com/davidmaxy1994/brainflix.git)
 
-### `npm test`
+## Backend Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **GitHub Link (Backend)**: [BrainFlix API](https://github.com/davidmaxy1994/david-maksymiuk-brainflix-api.git)
 
-### `npm run build`
+## Tools & Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: Used for building the user interface and managing state.
+- **React Router**: Provides multi-page functionality.
+- **SASS**: For styling the application.
+- **Axios**: For making API requests.
+- **Node.js**: Used to build the API server.
+- **JSON**: A simple file used to store video data for persistence.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Functional Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### API Server
 
-### `npm run eject`
+The API server must handle the following endpoints:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **GET /videos**: Returns an array of all videos.
+2. **GET /videos/:id**: Returns the details of a specific video by `id`.
+3. **POST /videos**: Adds a new video with a title, description, and a hardcoded image URL. The video data should persist across server restarts and be stored in a JSON file.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### API Details
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Videos Data**: Videos are stored in a `data/videos.json` file.
+- **Static Assets**: Images for the videos are served as static assets from the server.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Video Upload Page
 
-## Learn More
+- **Functionality**: Users can upload a new video, which gets saved in the backend API.
+- **Form Fields**: The form includes fields for the title and description. A hardcoded image URL will be used for the video thumbnail.
+- **Persistence**: Data for videos must persist even if the server is restarted.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### API Persistence
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The API uses a JSON file (`data/videos.json`) to store the video data.
+- The video data must persist even after the Node server is restarted.
 
-### Code Splitting
+## Visual Design Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The app should be **responsive** and resemble the design mockups.
+- Feedback from previous sprints should be incorporated into the final design.
+- **CSS Styling**: The app uses SASS with BEM principles, Flexbox for layout control, and includes SASS variables.
 
-### Analyzing the Bundle Size
+### Implementation Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **React Components**: Multiple functional components were created to represent various parts of the app.
+2. **React Router**: Used to handle routing across different pages.
+3. **SASS**: Applied for styling and consistent design across the app.
+4. **API Integration**: Integrated the new API with the frontend to manage video data.
+5. **Static Assets**: Used provided assets for video thumbnails.
 
-### Making a Progressive Web App
+## Running the Project Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Frontend (React Application)
 
-### Advanced Configuration
+1. Clone the frontend repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   git clone https://github.com/davidmaxy1994/brainflix.git
 
-### Deployment
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. Navigate to the frontend directory:
 
-### `npm run build` fails to minify
+``bash
+Copy code
+cd brainflix
+Install the dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# brainflix
+bash
+Copy code
+npm install
+
+3. Run the application:
+
+bash
+Copy code
+npm start
+This will start the frontend server on http://localhost:3000.
+
+### Backend (Node.js API)
+
+1. Clone the backend repository:
+
+Copy code
+git clone https://github.com/davidmaxy1994/david-maksymiuk-brainflix-api.git
+
+2. Navigate to the backend directory:
+
+cd david-maksymiuk-brainflix-api
+
+3. Install the dependencies:
+   npm install
+
+4. Start the backend server:
+
+npm start
+This will start the API server on http://localhost:8080.
